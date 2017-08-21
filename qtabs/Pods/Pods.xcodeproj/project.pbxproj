@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D172361E487BBCC8F21279447850233 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		3FD6AB1B08E2A59B1F18563DE76F38E8 /* Pods-qtabs-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 07F035D3A2FCE1911473544D16265E15 /* Pods-qtabs-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		463BB702396AB13E2A7A32A3B03A552F /* QHorizontalTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A181257BF359B55216BAA59521BC6453 /* QHorizontalTableView.swift */; };
+		5600AB918024B24CB69A1CA86E7CD531 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		658041486DC2BBFACC26055BC4E4C725 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+		8461BE41787188CD8CF86FEF95AFBFF1 /* QHorizontalTableView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8596B210529F6F6B66991235E3EAD21C /* QHorizontalTableView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C940448B1E5513B68B751E7CC7B1A97D /* QHorizontalTableView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E10901920185C4196E753AFEB94AA9F /* QHorizontalTableView-dummy.m */; };
+		E5ECF94A400C6B9558509630F7B48A17 /* Pods-qtabs-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4511594A8A70A9F87A69B043790768 /* Pods-qtabs-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2681E8C8185AD79D629740772E3F17E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C88AE6E6D66C45EED31B5B690146FF0;
+			remoteInfo = QHorizontalTableView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0658707068A205C54FCABE62EC5CACEB /* Pods-qtabs.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-qtabs.modulemap"; sourceTree = "<group>"; };
+		07F035D3A2FCE1911473544D16265E15 /* Pods-qtabs-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-qtabs-umbrella.h"; sourceTree = "<group>"; };
+		0A4511594A8A70A9F87A69B043790768 /* Pods-qtabs-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-qtabs-dummy.m"; sourceTree = "<group>"; };
+		1462B6476CDC031CD1DAEB60E32CFC81 /* Pods-qtabs-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-qtabs-resources.sh"; sourceTree = "<group>"; };
+		16E29B641C599F246A46A5310277365D /* Pods-qtabs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-qtabs.debug.xcconfig"; sourceTree = "<group>"; };
+		28BB83E283BC08BBE4090044A3EDB33B /* QHorizontalTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = QHorizontalTableView.framework; path = QHorizontalTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29589D9D07052BA633526E7F2135B1E1 /* QHorizontalTableView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QHorizontalTableView.xcconfig; sourceTree = "<group>"; };
+		3E10901920185C4196E753AFEB94AA9F /* QHorizontalTableView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QHorizontalTableView-dummy.m"; sourceTree = "<group>"; };
+		4AFAFC82D28839B73751CDE87692151D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51F163CD435B7775E01033605C5ADD92 /* Pods-qtabs-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-qtabs-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5222C82B2626317DDAA4AF14813B0DFB /* Pods-qtabs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-qtabs.release.xcconfig"; sourceTree = "<group>"; };
+		543979E64DF757799D8AED314781E0C3 /* QHorizontalTableView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = QHorizontalTableView.modulemap; sourceTree = "<group>"; };
+		8596B210529F6F6B66991235E3EAD21C /* QHorizontalTableView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QHorizontalTableView-umbrella.h"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9FADE9DA865486C24BFB73363EBC5E98 /* Pods-qtabs-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-qtabs-acknowledgements.plist"; sourceTree = "<group>"; };
+		A181257BF359B55216BAA59521BC6453 /* QHorizontalTableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QHorizontalTableView.swift; path = Classes/QHorizontalTableView.swift; sourceTree = "<group>"; };
+		B0B7073028EA5DD5C2A9EBB50689D3C8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3A8895E40333E13B33B9CA2EFBD84D7 /* Pods_qtabs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_qtabs.framework; path = "Pods-qtabs.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		D03F2815D725CB33BA1AE548B59EF1F4 /* QHorizontalTableView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QHorizontalTableView-prefix.pch"; sourceTree = "<group>"; };
+		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E00FF32827CAE3D7E8B39EEA05A14211 /* Pods-qtabs-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-qtabs-frameworks.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3920367B97968CBB62A8AD15178E2D90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5600AB918024B24CB69A1CA86E7CD531 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91E4B1048DBE5C887B14399294DBCBE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D172361E487BBCC8F21279447850233 /* Foundation.framework in Frameworks */,
+				658041486DC2BBFACC26055BC4E4C725 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3CA73014344F276AA36B89792BE019F5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B0B7073028EA5DD5C2A9EBB50689D3C8 /* Info.plist */,
+				543979E64DF757799D8AED314781E0C3 /* QHorizontalTableView.modulemap */,
+				29589D9D07052BA633526E7F2135B1E1 /* QHorizontalTableView.xcconfig */,
+				3E10901920185C4196E753AFEB94AA9F /* QHorizontalTableView-dummy.m */,
+				D03F2815D725CB33BA1AE548B59EF1F4 /* QHorizontalTableView-prefix.pch */,
+				8596B210529F6F6B66991235E3EAD21C /* QHorizontalTableView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/QHorizontalTableView";
+			sourceTree = "<group>";
+		};
+		3F46F6627F0D693FE3859890608B2F4E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7837784B5357D38675DDFF3D345D197A /* Pods-qtabs */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				438B396F6B4147076630CAEFE34282C1 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		438B396F6B4147076630CAEFE34282C1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */,
+				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7837784B5357D38675DDFF3D345D197A /* Pods-qtabs */ = {
+			isa = PBXGroup;
+			children = (
+				4AFAFC82D28839B73751CDE87692151D /* Info.plist */,
+				0658707068A205C54FCABE62EC5CACEB /* Pods-qtabs.modulemap */,
+				51F163CD435B7775E01033605C5ADD92 /* Pods-qtabs-acknowledgements.markdown */,
+				9FADE9DA865486C24BFB73363EBC5E98 /* Pods-qtabs-acknowledgements.plist */,
+				0A4511594A8A70A9F87A69B043790768 /* Pods-qtabs-dummy.m */,
+				E00FF32827CAE3D7E8B39EEA05A14211 /* Pods-qtabs-frameworks.sh */,
+				1462B6476CDC031CD1DAEB60E32CFC81 /* Pods-qtabs-resources.sh */,
+				07F035D3A2FCE1911473544D16265E15 /* Pods-qtabs-umbrella.h */,
+				16E29B641C599F246A46A5310277365D /* Pods-qtabs.debug.xcconfig */,
+				5222C82B2626317DDAA4AF14813B0DFB /* Pods-qtabs.release.xcconfig */,
+			);
+			name = "Pods-qtabs";
+			path = "Target Support Files/Pods-qtabs";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				AC08D520D8DC04831FE7EB46EFF398E4 /* Pods */,
+				A404426BE473D0F35064214D6434A3E1 /* Products */,
+				3F46F6627F0D693FE3859890608B2F4E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A404426BE473D0F35064214D6434A3E1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B3A8895E40333E13B33B9CA2EFBD84D7 /* Pods_qtabs.framework */,
+				28BB83E283BC08BBE4090044A3EDB33B /* QHorizontalTableView.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC08D520D8DC04831FE7EB46EFF398E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D44EC29DDEFCBCFF525C376B3B10A69B /* QHorizontalTableView */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D44EC29DDEFCBCFF525C376B3B10A69B /* QHorizontalTableView */ = {
+			isa = PBXGroup;
+			children = (
+				A181257BF359B55216BAA59521BC6453 /* QHorizontalTableView.swift */,
+				3CA73014344F276AA36B89792BE019F5 /* Support Files */,
+			);
+			name = QHorizontalTableView;
+			path = QHorizontalTableView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B3043E090528BA937705B8321325C446 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8461BE41787188CD8CF86FEF95AFBFF1 /* QHorizontalTableView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFE080D9F9EBE242943865BAA2B7D322 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FD6AB1B08E2A59B1F18563DE76F38E8 /* Pods-qtabs-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8FFCA6B09EFE7DA823A3823E9353F6F3 /* Pods-qtabs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CEA12265B6A399FE952C22A431B3F9F /* Build configuration list for PBXNativeTarget "Pods-qtabs" */;
+			buildPhases = (
+				3588E8762202C7F641425BA633F978E1 /* Sources */,
+				3920367B97968CBB62A8AD15178E2D90 /* Frameworks */,
+				EFE080D9F9EBE242943865BAA2B7D322 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2FEE5F37855C585AD32DA9473AEB768C /* PBXTargetDependency */,
+			);
+			name = "Pods-qtabs";
+			productName = "Pods-qtabs";
+			productReference = B3A8895E40333E13B33B9CA2EFBD84D7 /* Pods_qtabs.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9C88AE6E6D66C45EED31B5B690146FF0 /* QHorizontalTableView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7717BA231FFD08C596AF394DB24BCB6 /* Build configuration list for PBXNativeTarget "QHorizontalTableView" */;
+			buildPhases = (
+				87D83D9C4D281636AD24A744D7ECA85B /* Sources */,
+				91E4B1048DBE5C887B14399294DBCBE7 /* Frameworks */,
+				B3043E090528BA937705B8321325C446 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QHorizontalTableView;
+			productName = QHorizontalTableView;
+			productReference = 28BB83E283BC08BBE4090044A3EDB33B /* QHorizontalTableView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = A404426BE473D0F35064214D6434A3E1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8FFCA6B09EFE7DA823A3823E9353F6F3 /* Pods-qtabs */,
+				9C88AE6E6D66C45EED31B5B690146FF0 /* QHorizontalTableView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3588E8762202C7F641425BA633F978E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5ECF94A400C6B9558509630F7B48A17 /* Pods-qtabs-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87D83D9C4D281636AD24A744D7ECA85B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C940448B1E5513B68B751E7CC7B1A97D /* QHorizontalTableView-dummy.m in Sources */,
+				463BB702396AB13E2A7A32A3B03A552F /* QHorizontalTableView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2FEE5F37855C585AD32DA9473AEB768C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QHorizontalTableView;
+			target = 9C88AE6E6D66C45EED31B5B690146FF0 /* QHorizontalTableView */;
+			targetProxy = 2681E8C8185AD79D629740772E3F17E2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		163D87BE96A63549B0EACF1CC31A2E90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		4316F20FF14899FD9442315DB64628A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5222C82B2626317DDAA4AF14813B0DFB /* Pods-qtabs.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-qtabs/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-qtabs/Pods-qtabs.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_qtabs;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		707B86CFB21B645E37109F39754D4051 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A00186F7AC5D2086EBE3A176389D71D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16E29B641C599F246A46A5310277365D /* Pods-qtabs.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-qtabs/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-qtabs/Pods-qtabs.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_qtabs;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CEAEEF6286045D478AE0BB0159E2E079 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29589D9D07052BA633526E7F2135B1E1 /* QHorizontalTableView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/QHorizontalTableView/QHorizontalTableView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/QHorizontalTableView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/QHorizontalTableView/QHorizontalTableView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = QHorizontalTableView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E7FE55D8F5C3499BB91CDAA6A6283638 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29589D9D07052BA633526E7F2135B1E1 /* QHorizontalTableView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/QHorizontalTableView/QHorizontalTableView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/QHorizontalTableView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/QHorizontalTableView/QHorizontalTableView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = QHorizontalTableView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				163D87BE96A63549B0EACF1CC31A2E90 /* Debug */,
+				707B86CFB21B645E37109F39754D4051 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CEA12265B6A399FE952C22A431B3F9F /* Build configuration list for PBXNativeTarget "Pods-qtabs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A00186F7AC5D2086EBE3A176389D71D1 /* Debug */,
+				4316F20FF14899FD9442315DB64628A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7717BA231FFD08C596AF394DB24BCB6 /* Build configuration list for PBXNativeTarget "QHorizontalTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7FE55D8F5C3499BB91CDAA6A6283638 /* Debug */,
+				CEAEEF6286045D478AE0BB0159E2E079 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

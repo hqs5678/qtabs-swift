@@ -1,0 +1,6 @@
+framework module QHorizontalTableView {
+  umbrella header "QHorizontalTableView-umbrella.h"
+
+  export *
+  module * { export * }
+}
