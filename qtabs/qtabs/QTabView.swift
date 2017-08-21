@@ -14,6 +14,8 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
 
     var horizontalView: QHorizontalTableView!
     fileprivate var controller: UIViewController!
+    fileprivate var curIndex = -1
+    fileprivate var preOrientation = UIDeviceOrientation.unknown
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,17 +28,25 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
     }
     
     private func setup(){
+        
+        self.backgroundColor = UIColor.white
+        
         horizontalView = QHorizontalTableView(frame: self.frame)
+        horizontalView.backgroundColor = UIColor.white
         horizontalView.tableViewDelegate = self
         horizontalView.isPagingEnabled = true
         horizontalView.bounces = false
+        horizontalView.showsVerticalScrollIndicator = false
+        horizontalView.showsHorizontalScrollIndicator = false
+        
         self.addSubview(horizontalView)
+        horizontalView.layoutInSuperview(0, 0, 0, 0)
         
         horizontalView.register(QHorizontalTableViewCell.classForCoder(), forCellWithReuseIdentifier: QHorizontalTableViewCell.className)
         
         
         
-        NotificationCenter.default.addObserver(self, selector: #selector(QTabView.deviceOrientationDidChanged(notification:)), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(deviceOrientationDidChanged), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
         
     }
     
@@ -67,8 +77,38 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
         }
     }
     
-    func deviceOrientationDidChanged(notification: Notification){
+    
+    func doInMainThreadAfter(_ delay:Double, task:@escaping ()->()) {
+        DispatchQueue.main.asyncAfter(
+            deadline: DispatchTime.now() + DispatchTimeInterval.milliseconds(Int(delay * 1000)), execute: task)
+    }
+    
+    func deviceOrientationDidChanged(){
+        
+        let device = UIDevice.current
+        switch device.orientation {
+        case .portrait, .landscapeLeft, .landscapeRight:
+            if preOrientation != .unknown {
+                if preOrientation != device.orientation {
+                    updateTableView()
+                }
+            }
+            preOrientation = device.orientation
+            break
+        default:
+            break
+        }
+
+    }
+    
+    func updateTableView(){
+        
+        curIndex = (horizontalView.contentOffset.x / self.height).intValue
+        print(curIndex)
         horizontalView.reloadData()
+        if curIndex != -1 {
+            horizontalView.setContentOffset(CGPoint(x: curIndex.f * self.width, y: 0), animated: false)
+        }
     }
     
     
@@ -84,13 +124,17 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
     }
     
     func tableView(_ tableView: QHorizontalTableView, widthForItemAt index: Int) -> CGFloat {
-        return self.height
+        print(self.width)
+        return self.width
     }
     
     func tableView(_ tableView: QHorizontalTableView, cellForItemAt index: Int) -> QHorizontalTableViewCell {
         let cell = tableView.dequeueReusableCell(withReuseIdentifier: QHorizontalTableViewCell.className, for: index)
-        
-        cell.addSubview(controller.childViewControllers[index].view)
+        let view = controller.childViewControllers[index].view as UIView
+        cell.removeAllSubviews()
+        cell.addSubview(view)
+        cell.tag = index
+        view.layoutInSuperview(0, 0, 0, 0)
         
         return cell
     }
@@ -100,7 +144,7 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
     }
     
     deinit {
-        
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
     }
     
 }

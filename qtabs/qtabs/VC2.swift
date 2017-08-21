@@ -14,7 +14,7 @@ class VC2: UIViewController {
         super.viewDidLoad()
         
         
-        self.view.backgroundColor = UIColor.red.withAlphaComponent(0.5)
+        self.view.backgroundColor = UIColor.red.withAlphaComponent(0.3)
     }
 
 

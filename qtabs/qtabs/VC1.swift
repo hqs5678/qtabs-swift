@@ -13,7 +13,7 @@ class VC1: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.blue.withAlphaComponent(0.6)
+        self.view.backgroundColor = UIColor.blue.withAlphaComponent(0.4)
     }
 
 
