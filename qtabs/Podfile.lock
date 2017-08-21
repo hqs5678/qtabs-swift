@@ -1,12 +1,18 @@
 PODS:
   - QHorizontalTableView (1.0.16)
+  - QSExtensionSwift (1.0.17):
+    - SwiftHashing (~> 0.1)
+  - SwiftHashing (0.1)
 
 DEPENDENCIES:
   - QHorizontalTableView
+  - QSExtensionSwift
 
 SPEC CHECKSUMS:
   QHorizontalTableView: 3acfae0163af818b7223dbdca76958dd32bc3de5
+  QSExtensionSwift: 470ab99efca6af9b11a102819bcf0eb322f01731
+  SwiftHashing: 7998ceac4eda63801a456e7a7d3bfbfac20e9dbc
 
-PODFILE CHECKSUM: aec4409e46ccf8e1892f44d1481514ae0692699e
+PODFILE CHECKSUM: 1b96c91dae240f4b5dee2b02cc6a90ab4dd3f22d
 
 COCOAPODS: 1.2.1

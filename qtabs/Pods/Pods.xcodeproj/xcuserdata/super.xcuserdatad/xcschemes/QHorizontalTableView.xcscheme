@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '9C88AE6E6D66C45EED31B5B690146FF0'
+               BlueprintIdentifier = '2BE6AFCB312B9A08085A653529ADA146'
                BlueprintName = 'QHorizontalTableView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'QHorizontalTableView.framework'>

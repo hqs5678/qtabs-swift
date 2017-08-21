@@ -6,5 +6,6 @@ target 'qtabs' do
   use_frameworks!
 
   pod 'QHorizontalTableView'
+  pod 'QSExtensionSwift'
 
 end

@@ -90,9 +90,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/QHorizontalTableView/QHorizontalTableView.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/QSExtensionSwift/QSExtensionSwift.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftHashing/SwiftHashing.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/QHorizontalTableView/QHorizontalTableView.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/QSExtensionSwift/QSExtensionSwift.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftHashing/SwiftHashing.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
