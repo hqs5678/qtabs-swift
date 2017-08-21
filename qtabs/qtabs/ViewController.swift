@@ -15,6 +15,11 @@ class ViewController: UIViewController {
         
         let tabs = QTabView(frame: self.view.frame)
         self.view.addSubview(tabs)
+        
+        self.addChildViewController(VC1())
+        self.addChildViewController(VC2())
+        self.addChildViewController(VC3())
+        self.addChildViewController(VC4())
     }
 
 
