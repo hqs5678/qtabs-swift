@@ -11,7 +11,7 @@ import QHorizontalTableView
 import QSExtensionSwift
 
 class QTabView: UIView, QHorizontalTableViewDelegate {
-
+    
     var horizontalView: QHorizontalTableView!
     fileprivate var controller: UIViewController!
     fileprivate var curIndex = -1
@@ -103,7 +103,7 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
     
     func updateTableView(){
         
-        curIndex = (horizontalView.contentOffset.x / self.height).intValue
+//        curIndex = (horizontalView.contentOffset.x / self.height).intValue
         print(curIndex)
         horizontalView.reloadData()
         if curIndex != -1 {
@@ -118,10 +118,7 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
         }
         return 0
     }
-    
-    func tableView(_ tableView: QHorizontalTableView, didSelectRowAt index: Int) {
-        
-    }
+
     
     func tableView(_ tableView: QHorizontalTableView, widthForItemAt index: Int) -> CGFloat {
         print(self.width)
@@ -139,8 +136,8 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
         return cell
     }
     
-    func tableView(_ tableView: QHorizontalTableView, willDisplay cell: QHorizontalTableViewCell, forItemAt index: Int) {
-        
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        curIndex = (scrollView.contentOffset.x / self.width).intValue
     }
     
     deinit {

@@ -102,14 +102,37 @@ extension QHorizontalTableView: UICollectionViewDataSource, UICollectionViewDele
     }
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        tableViewDelegate.tableView(self, didSelectRowAt: indexPath.row)
+        tableViewDelegate.tableView?(self, didSelectRowAt: indexPath.row)
     }
     
     public func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         
-        tableViewDelegate.tableView(self, willDisplay: cell as! QHorizontalTableViewCell, forItemAt: indexPath.row)
+        tableViewDelegate.tableView?(self, willDisplay: cell as! QHorizontalTableViewCell, forItemAt: indexPath.row)
     }
     
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        tableViewDelegate.scrollViewDidScroll?(scrollView)
+    }
+    
+    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        tableViewDelegate.scrollViewDidEndDecelerating?(scrollView)
+    }
+    
+    public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        tableViewDelegate.scrollViewDidEndDragging?(scrollView, willDecelerate: decelerate)
+    }
+    
+    public func scrollViewDidScrollToTop(_ scrollView: UIScrollView) {
+        tableViewDelegate.scrollViewDidScrollToTop?(scrollView)
+    }
+    
+    public func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
+        tableViewDelegate.scrollViewWillBeginDecelerating?(scrollView)
+    }
+    
+    public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        tableViewDelegate.scrollViewWillEndDragging?(scrollView, withVelocity: velocity, targetContentOffset: targetContentOffset)
+    }
 }
 
 open class LinearLayout: UICollectionViewFlowLayout {
@@ -154,13 +177,14 @@ open class LinearLayout: UICollectionViewFlowLayout {
     open override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
         return true
     }
+    
 }
 
 open class QHorizontalTableViewCell: UICollectionViewCell {
     
 }
 
-public protocol QHorizontalTableViewDelegate: NSObjectProtocol {
+@objc public protocol QHorizontalTableViewDelegate: NSObjectProtocol {
     
     func tableViewItemsCount(_ tableView: QHorizontalTableView) -> Int
     
@@ -168,8 +192,19 @@ public protocol QHorizontalTableViewDelegate: NSObjectProtocol {
     
     func tableView(_ tableView: QHorizontalTableView, widthForItemAt index: Int) -> CGFloat
     
-    func tableView(_ tableView: QHorizontalTableView, didSelectRowAt index: Int)
+    @objc optional func tableView(_ tableView: QHorizontalTableView, didSelectRowAt index: Int)
     
-    func tableView(_ tableView: QHorizontalTableView, willDisplay cell: QHorizontalTableViewCell, forItemAt index: Int)
+    @objc optional func tableView(_ tableView: QHorizontalTableView, willDisplay cell: QHorizontalTableViewCell, forItemAt index: Int)
     
+    @objc optional func scrollViewDidScroll(_ scrollView: UIScrollView)
+    
+    @objc optional func scrollViewDidEndDecelerating(_ scrollView: UIScrollView)
+    
+    @objc optional func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool)
+    
+    @objc optional func scrollViewDidScrollToTop(_ scrollView: UIScrollView)
+    
+    @objc optional func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView)
+    
+    @objc optional func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>)
 }
