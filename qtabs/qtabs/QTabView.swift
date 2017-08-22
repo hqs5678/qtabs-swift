@@ -19,6 +19,9 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
     fileprivate var preOrientation = UIDeviceOrientation.unknown
     var titleFontSize = 17.f
     var titlePadding = 10.f
+    lazy var indicator = CALayer()
+    var indicatorHeight = 3.f
+    var indicatorColor = UIColor.gray
     
     var titles: [String]! {
         didSet{
@@ -58,6 +61,10 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
         titleView.tableViewDelegate = self
         titleView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.3)
         titleView.register(ItemCell.classForCoder(), forCellWithReuseIdentifier: ItemCell.className)
+        
+        indicator.frame = CGRect(x: 0, y: titleView.height - indicatorHeight, width: 39, height: indicatorHeight)
+        indicator.backgroundColor = indicatorColor.cgColor
+        self.titleView.layer.addSublayer(indicator)
         
         self.addSubview(titleView)
         self.addSubview(horizontalView)
@@ -192,6 +199,17 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
             return cell
         }
         
+    }
+    
+    func tableView(_ tableView: QHorizontalTableView, didSelectRowAt index: Int) {
+        if tableView == titleView {
+            let cell = self.tableView(titleView, cellForItemAt: index) as! ItemCell
+            
+            let rect = cell.titleLabel.convert(cell.titleLabel.bounds, to: self) as CGRect
+            indicator.x = rect.origin.x
+            indicator.width = rect.size.width
+        
+        }
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
