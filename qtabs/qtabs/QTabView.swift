@@ -17,12 +17,16 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
     fileprivate var controller: UIViewController!
     fileprivate var curIndex = -1
     fileprivate var preOrientation = UIDeviceOrientation.unknown
+    var titleFontSize = 17.f
+    var titlePadding = 10.f
     
     var titles: [String]! {
         didSet{
             didSetTitles()
         }
     }
+    
+    var titleFrames: [CGRect]!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -95,6 +99,11 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
     }
     
     func didSetTitles(){
+        titleFrames = [CGRect]()
+        for t in titles {
+            let frame = t.boundWithSize(CGSize(width: 100, height: self.height), font: UIFont.systemFont(ofSize: titleFontSize))
+            titleFrames.append(frame)
+        }
         titleView.reloadData()
     }
     
@@ -155,7 +164,7 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
             return self.width
         }
         else{
-            return 120
+            return titleFrames[index].size.width + titlePadding + titlePadding
         }
     }
     
@@ -173,8 +182,12 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
         }
         else{
             let cell = tableView.dequeueReusableCell(withReuseIdentifier: ItemCell.className, for: index) as! ItemCell
-            
+            var frame = titleFrames[index]
+            frame.origin.x = titlePadding
+            frame.origin.y = (titleView.height - frame.size.height) * 0.5
+            cell.titleLabel.frame = frame
             cell.titleLabel.text = titles[index]
+            cell.titleLabel.font = UIFont.systemFont(ofSize: titleFontSize)
             
             return cell
         }
@@ -213,12 +226,7 @@ fileprivate class ItemCell: QHorizontalTableViewCell {
         titleLabel = UILabel(frame: self.frame)
         self.addSubview(titleLabel)
         
-        titleLabel.layoutInSuperview(0, 0, 0, 0)
-        
-        titleLabel.textAlignment = .center
+        titleLabel.backgroundColor = UIColor.white
         titleLabel.textColor = UIColor.brown
-        
-        
-        
     }
 }

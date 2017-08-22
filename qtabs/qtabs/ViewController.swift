@@ -22,9 +22,12 @@ class ViewController: UIViewController {
         self.addChildViewController(VC2())
         self.addChildViewController(VC3())
         self.addChildViewController(VC4())
+        self.addChildViewController(VC2())
+        self.addChildViewController(VC3())
+        self.addChildViewController(VC4())
         
         
-        tabs.titles = ["推荐", "娱乐", "体育", "热点"] //, "新闻", "帅哥", "美女"]
+        tabs.titles = ["推荐", "娱乐明星", "体育", "新热点", "新闻", "帅哥", "美女"]
     }
 
 
