@@ -23,6 +23,8 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
     var indicatorHeight = 3.f
     var indicatorColor = UIColor.gray
     
+    fileprivate var preX = 0.f
+    
     var titles: [String]! {
         didSet{
             didSetTitles()
@@ -112,6 +114,7 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
             titleFrames.append(frame)
         }
         titleView.reloadData()
+        self.tableView(titleView, didSelectRowAt: 0)
     }
     
     
@@ -209,16 +212,97 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
             indicator.x = rect.origin.x
             indicator.width = rect.size.width
         
+            horizontalView.contentOffset = CGPoint(x: index.f * self.width, y: 0)
         }
     }
+    
+    func centerX(rect: CGRect) -> CGFloat {
+        return (rect.maxX + rect.minX) * 0.5
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView == horizontalView {
+            let sx = horizontalView.contentOffset.x
+            let index = sx.intValue / self.width.intValue
+            let nextIndex = index + 1
+            if nextIndex >= titles.count {
+                return
+            }
+            let offset = sx - index.f * self.width
+            
+            var cell = self.tableView(titleView, cellForItemAt: index) as! ItemCell
+            let rect0 = cell.titleLabel.convert(cell.titleLabel.bounds, to: self) as CGRect
+            
+            cell = self.tableView(titleView, cellForItemAt: nextIndex) as! ItemCell
+            let rect1 = cell.titleLabel.convert(cell.titleLabel.bounds, to: self) as CGRect
+            
+            let w0 = rect1.minX - rect0.minX
+            let w1 = rect1.maxX - rect0.maxX
+            
+            var t = offset / self.width
+            var left = 0.f
+            var right = 0.f
+            var a0 = 0.f
+            var v0 = 0.f
+            var a1 = 0.f
+            var v1 = 0.f
+            var direct = 1.f
+            
+            if sx > preX {
+                // 向左滑
+                a0 = w0 * 2
+                v0 = 0
+                
+                a1 = w1 * -2
+                v1 = -a1
+                
+                left = rect0.origin.x
+                right = rect0.maxX
+            }
+            else {
+                a0 = w0 * -2
+                v0 = -a0
+                
+                a1 = w1 * 2
+                v1 = 0
+                
+                left = rect1.origin.x
+                right = rect1.maxX
+                
+                t = 1 - t
+                direct = -1.f
+            }
+            
+            left += (v0 * t + 0.5 * a0 * t * t) * direct
+            right += (v1 * t + 0.5 * a1 * t * t) * direct
+            
+            CATransaction.begin()
+            CATransaction.setDisableActions(true)
+            indicator.x = left
+            indicator.width = right - left
+            CATransaction.commit()
+            
+            if offset == 0 {
+                
+                
+            }
+            
+            
+            preX = sx
+        }
+    }
+    
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if scrollView == horizontalView {
             curIndex = (scrollView.contentOffset.x / self.width).intValue
         }
-        else{
-            
-        }
+        let index = horizontalView.contentOffset.x.intValue / self.width.intValue
+        let cell = self.tableView(titleView, cellForItemAt: index) as! ItemCell
+        let rect = cell.titleLabel.convert(cell.titleLabel.bounds, to: self) as CGRect
+        let targetCenter = centerX(rect: rect)
+        let point = CGPoint(x: targetCenter - self.width * 0.5, y: 0)
+        titleView.setContentOffset(point, animated: true)
     }
     
     deinit {
@@ -243,8 +327,6 @@ fileprivate class ItemCell: QHorizontalTableViewCell {
     private func setup(){
         titleLabel = UILabel(frame: self.frame)
         self.addSubview(titleLabel)
-        
-        titleLabel.backgroundColor = UIColor.white
         titleLabel.textColor = UIColor.brown
     }
 }
