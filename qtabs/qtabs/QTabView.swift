@@ -15,10 +15,9 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
     var horizontalView: QHorizontalTableView!
     var titleView: QHorizontalTableView!
     fileprivate var controller: UIViewController!
-    fileprivate var curIndex = -1
+    fileprivate var curIndex = 0
     fileprivate var preOrientation = UIDeviceOrientation.unknown
-    var titleFontSize = 16.f
-    var titleSelectedFontSize = 17.f
+    var titleFontSize = 17.f
     var titlePadding = 10.f
     fileprivate lazy var indicator = CALayer()
     var indicatorHeight = 3.f {
@@ -218,15 +217,17 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
         else{
             let cell = tableView.dequeueReusableCell(withReuseIdentifier: ItemCell.className, for: index) as! ItemCell
             
-            cell.titleLabel.text = titles[index]
-            cell.titleBound = titleBounds[index]
-            cell.fontNormalSize = titleFontSize
-            cell.fontSelectedSize = titleSelectedFontSize
-            cell.textColorNormal = titleNormalColor
-            cell.textColorSelected = titleSelectedColor
+            if curIndex != index {
+                cell.titleLabel.textColor = titleNormalColor
+            }
+            else{
+                cell.titleLabel.textColor = titleSelectedColor
+            }
+            cell.titleLabel.font = UIFont.systemFont(ofSize: titleFontSize)
             cell.titlePadding = titlePadding
             cell.cellHeight = self.titleView.height
-            cell.updateUI()
+            cell.titleLabel.text = titles[index]
+            cell.titleBound = titleBounds[index]
             
             return cell
         }
@@ -255,14 +256,18 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
         if scrollView == horizontalView {
             let sx = horizontalView.contentOffset.x
             let index = sx.intValue / self.width.intValue
+            
+            let offset = sx - index.f * self.width
+            if offset == 0 {
+                curIndex = index
+                titleView.reloadData()
+                return
+            }
             let nextIndex = index + 1
             if nextIndex >= titles.count {
                 return
             }
-            let offset = sx - index.f * self.width
-            if offset == 0 {
-                return
-            }
+            
             let rect0 = labelRect(index: index)
             let rect1 = labelRect(index: nextIndex)
             
@@ -305,6 +310,8 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
                     ox = 0
                 }
                 px = ox + d * t
+                
+                
             }
             else {
                 a0 = w0 * -2
@@ -371,7 +378,7 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
             
             if index > 0 {
                 let preRect = labelRect(index: index - 1)
-                if rect.origin.x > preRect.origin.x {
+                if rect.origin.x > preRect.origin.x && rect.origin.y < 0 {
                     titleLabelFrames[index] = rect
                 }
             }
@@ -416,11 +423,11 @@ fileprivate class ItemCell: QHorizontalTableViewCell {
     var titleLabel: UILabel!
     var cellHeight = 0.f
     var titlePadding = 0.f
-    var fontNormalSize = 0.f
-    var fontSelectedSize = 0.f
-    var textColorNormal: UIColor!
-    var textColorSelected: UIColor!
-    var titleBound: CGRect!
+    var titleBound: CGRect! {
+        didSet{
+            updateUI()
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -438,11 +445,9 @@ fileprivate class ItemCell: QHorizontalTableViewCell {
     }
     
     func updateUI(){
-        titleBound.origin.x = titlePadding
-        titleBound.origin.y = (cellHeight - titleBound.size.height) * 0.5
-        titleLabel.frame = titleBound
-        titleLabel.font = UIFont.systemFont(ofSize: fontNormalSize)
-        titleLabel.textColor = textColorNormal
-
+        var frame = titleBound as CGRect
+        frame.origin.x = titlePadding
+        frame.origin.y = (cellHeight - frame.size.height) * 0.5
+        titleLabel.frame = frame
     }
 }
