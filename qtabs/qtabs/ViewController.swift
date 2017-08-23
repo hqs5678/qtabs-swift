@@ -17,17 +17,13 @@ class ViewController: UIViewController {
         self.view.addSubview(tabs)
         
         tabs.layoutInSuperview(22, 0, 0, 0)
-        
-        self.addChildViewController(VC1())
-        self.addChildViewController(VC2())
-        self.addChildViewController(VC3())
-        self.addChildViewController(VC4())
-        self.addChildViewController(VC2())
-        self.addChildViewController(VC3())
-        self.addChildViewController(VC4())
-        
-        
         tabs.titles = ["推荐", "娱乐明星", "体育", "新热点", "新闻", "帅哥", "美女"]
+        
+        for i in 0 ..< tabs.titles.count {
+            let vc = VC1()
+            vc.index = "\(tabs.titles[i]) \(i)"
+            self.addChildViewController(vc)
+        }
     }
 
 

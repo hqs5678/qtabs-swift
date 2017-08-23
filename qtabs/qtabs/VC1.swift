@@ -10,10 +10,22 @@ import UIKit
 
 class VC1: UIViewController {
 
+    let label = UILabel()
+    
+    var index = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.blue.withAlphaComponent(0.4)
+        self.view.backgroundColor = UIColor.randomColor()
+        label.frame = self.view.frame
+        self.view.addSubview(label)
+        
+        
+        label.textAlignment = .center
+        label.text = index
+        label.font = UIFont.systemFont(ofSize: 20)
+        label.textColor = UIColor.white
     }
 
 

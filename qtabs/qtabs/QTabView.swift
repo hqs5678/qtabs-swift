@@ -30,8 +30,9 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
             didSetTitles()
         }
     }
-    
+     
     var titleFrames: [CGRect]!
+    lazy var titleLabelFrames = [Int : CGRect]()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -205,14 +206,16 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
     }
     
     func tableView(_ tableView: QHorizontalTableView, didSelectRowAt index: Int) {
+        
         if tableView == titleView {
-            let cell = self.tableView(titleView, cellForItemAt: index) as! ItemCell
             
+            let cell = self.tableView(titleView, cellForItemAt: index) as! ItemCell
             let rect = cell.titleLabel.convert(cell.titleLabel.bounds, to: self) as CGRect
             indicator.x = rect.origin.x
             indicator.width = rect.size.width
         
             horizontalView.contentOffset = CGPoint(x: index.f * self.width, y: 0)
+            adjustTitleViewToCenter()
         }
     }
     
@@ -229,15 +232,19 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
                 return
             }
             let offset = sx - index.f * self.width
-            
-            var cell = self.tableView(titleView, cellForItemAt: index) as! ItemCell
-            let rect0 = cell.titleLabel.convert(cell.titleLabel.bounds, to: self) as CGRect
-            
-            cell = self.tableView(titleView, cellForItemAt: nextIndex) as! ItemCell
-            let rect1 = cell.titleLabel.convert(cell.titleLabel.bounds, to: self) as CGRect
+            if offset == 0 {
+                return
+            }
+            let rect0 = labelRect(index: index)
+            let rect1 = labelRect(index: nextIndex)
             
             let w0 = rect1.minX - rect0.minX
             let w1 = rect1.maxX - rect0.maxX
+            
+            let c0 = centerX(rect: rect0)
+            let c1 = centerX(rect: rect1)
+            var d = c1 - c0
+            var px = 0.f
             
             var t = offset / self.width
             var left = 0.f
@@ -258,6 +265,18 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
                 
                 left = rect0.origin.x
                 right = rect0.maxX
+                
+                if c0 + d - self.width * 0.5 > titleView.contentSize.width - self.width {
+                    d -= c0 + d + self.width * 0.5 - titleView.contentSize.width
+                }
+                else if c0 - self.width  * 0.5 < 0 {
+                    d -= self.width * 0.5 - c0
+                }
+                var ox = c0 - self.width * 0.5
+                if ox < 0 {
+                    ox = 0
+                }
+                px = ox + d * t
             }
             else {
                 a0 = w0 * -2
@@ -271,6 +290,20 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
                 
                 t = 1 - t
                 direct = -1.f
+                
+                var flag = true
+                if c0 - self.width * 0.5 < 0 {
+                    d -= self.width * 0.5 - c0
+                    px = c1 - d * t - self.width * 0.5
+                    flag = false
+                }
+                else if c0 + d + self.width * 0.5 > titleView.contentSize.width {
+                    d -= c0 + d + self.width * 0.5 - titleView.contentSize.width
+                }
+                if flag {
+                    px = c0 + d * (1 - t) - self.width * 0.5
+                }
+                
             }
             
             left += (v0 * t + 0.5 * a0 * t * t) * direct
@@ -280,29 +313,69 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
             CATransaction.setDisableActions(true)
             indicator.x = left
             indicator.width = right - left
-            CATransaction.commit()
             
-            if offset == 0 {
-                
-                
+            if px < 0 {
+                px = 0
             }
+            else {
+                let maxX = titleView.contentSize.width - self.width
+                if px > maxX {
+                    px = maxX
+                }
+            }
+            let point = CGPoint(x: px, y: 0)
+            titleView.contentOffset = point
+            
+            CATransaction.commit()
             
             
             preX = sx
         }
     }
     
+    func labelRect(index: Int) -> CGRect{
+        if let rect = titleLabelFrames[index] {
+            return rect
+        }
+        else{
+            let cell = self.tableView(titleView, cellForItemAt: index) as! ItemCell
+            let rect = cell.titleLabel.convert(cell.titleLabel.bounds, to: self) as CGRect
+            
+            if index > 0 {
+                let preRect = labelRect(index: index - 1)
+                if rect.origin.x > preRect.origin.x {
+                    titleLabelFrames[index] = rect
+                }
+            }
+            return rect
+        }
+    }
+    
+    func adjustTitleViewToCenter(){
+        
+        let index = horizontalView.contentOffset.x.intValue / self.width.intValue
+        let cell = self.tableView(titleView, cellForItemAt: index) as! ItemCell
+        let rect = cell.titleLabel.convert(cell.titleLabel.bounds, to: self) as CGRect
+        let targetCenter = centerX(rect: rect)
+        var x = targetCenter - self.width * 0.5
+        if x < 0 {
+            x = 0
+        }
+        else {
+            let maxX = titleView.contentSize.width - self.width
+            if x > maxX {
+                x = maxX
+            }
+        }
+        let point = CGPoint(x: x, y: 0)
+        titleView.setContentOffset(point, animated: true)
+    }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if scrollView == horizontalView {
             curIndex = (scrollView.contentOffset.x / self.width).intValue
         }
-        let index = horizontalView.contentOffset.x.intValue / self.width.intValue
-        let cell = self.tableView(titleView, cellForItemAt: index) as! ItemCell
-        let rect = cell.titleLabel.convert(cell.titleLabel.bounds, to: self) as CGRect
-        let targetCenter = centerX(rect: rect)
-        let point = CGPoint(x: targetCenter - self.width * 0.5, y: 0)
-        titleView.setContentOffset(point, animated: true)
+        
     }
     
     deinit {

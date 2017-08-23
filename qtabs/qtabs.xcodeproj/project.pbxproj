@@ -15,9 +15,6 @@
 		BFB811751F4A7BC80016DADE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFB811731F4A7BC80016DADE /* LaunchScreen.storyboard */; };
 		BFB8117D1F4A7CB30016DADE /* QTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB8117C1F4A7CB30016DADE /* QTabView.swift */; };
 		BFB811821F4A8D610016DADE /* VC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB8117E1F4A8D610016DADE /* VC1.swift */; };
-		BFB811831F4A8D610016DADE /* VC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB8117F1F4A8D610016DADE /* VC2.swift */; };
-		BFB811841F4A8D610016DADE /* VC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB811801F4A8D610016DADE /* VC3.swift */; };
-		BFB811851F4A8D610016DADE /* VC4.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB811811F4A8D610016DADE /* VC4.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,9 +30,6 @@
 		BFB811761F4A7BC80016DADE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFB8117C1F4A7CB30016DADE /* QTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QTabView.swift; sourceTree = "<group>"; };
 		BFB8117E1F4A8D610016DADE /* VC1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC1.swift; sourceTree = "<group>"; };
-		BFB8117F1F4A8D610016DADE /* VC2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC2.swift; sourceTree = "<group>"; };
-		BFB811801F4A8D610016DADE /* VC3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC3.swift; sourceTree = "<group>"; };
-		BFB811811F4A8D610016DADE /* VC4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC4.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,9 +86,6 @@
 				BFB8116A1F4A7BC80016DADE /* AppDelegate.swift */,
 				BFB8116C1F4A7BC80016DADE /* ViewController.swift */,
 				BFB8117E1F4A8D610016DADE /* VC1.swift */,
-				BFB8117F1F4A8D610016DADE /* VC2.swift */,
-				BFB811801F4A8D610016DADE /* VC3.swift */,
-				BFB811811F4A8D610016DADE /* VC4.swift */,
 				BFB8116E1F4A7BC80016DADE /* Main.storyboard */,
 				BFB811711F4A7BC80016DADE /* Assets.xcassets */,
 				BFB811731F4A7BC80016DADE /* LaunchScreen.storyboard */,
@@ -227,11 +218,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFB811841F4A8D610016DADE /* VC3.swift in Sources */,
 				BFB8116D1F4A7BC80016DADE /* ViewController.swift in Sources */,
-				BFB811851F4A8D610016DADE /* VC4.swift in Sources */,
 				BFB8117D1F4A7CB30016DADE /* QTabView.swift in Sources */,
-				BFB811831F4A8D610016DADE /* VC2.swift in Sources */,
 				BFB811821F4A8D610016DADE /* VC1.swift in Sources */,
 				BFB8116B1F4A7BC80016DADE /* AppDelegate.swift in Sources */,
 			);
