@@ -49,7 +49,7 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
         }
     }
      
-    var titleBounds: [CGRect]!
+    lazy var titleBounds = [CGRect]()
     lazy var titleLabelFrames = [Int : CGRect]()
     
     override init(frame: CGRect) {
@@ -89,7 +89,17 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
         
         self.addSubview(titleView)
         self.addSubview(horizontalView)
-        horizontalView.layoutInSuperview(titleView.height, 0, 0, 0)
+        
+        
+        titleView.translatesAutoresizingMaskIntoConstraints = false
+        let left = NSLayoutConstraint(item: titleView, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1, constant: 0)
+        let right = NSLayoutConstraint(item: titleView, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1, constant: 0)
+        let top = NSLayoutConstraint(item: titleView, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 0)
+        let height = NSLayoutConstraint(item: titleView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 50)
+        NSLayoutConstraint.activate([left, right, top, height])
+        horizontalView.layoutInSuperview(50, 0, 0, 0)
+//        self.addConstraints([left, right, top])
+//        titleView.addConstraint(height)
         
         horizontalView.register(QHorizontalTableViewCell.classForCoder(), forCellWithReuseIdentifier: QHorizontalTableViewCell.className)
         
@@ -132,13 +142,13 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
     }
     
     func didSetTitles(){
-        titleBounds = [CGRect]()
+        titleBounds.removeAll()
         for t in titles {
-            let frame = t.boundWithSize(CGSize(width: 100, height: self.height), font: UIFont.systemFont(ofSize: titleFontSize))
+            let frame = t.boundWithSize(CGSize(width: 100, height: titleView.height), font: UIFont.systemFont(ofSize: titleFontSize))
             titleBounds.append(frame)
         }
         titleView.reloadData()
-        self.tableView(titleView, didSelectRowAt: 0)
+        self.tableView(titleView, didSelectRowAt: curIndex)
     }
     
     
@@ -149,19 +159,19 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
     
     func deviceOrientationDidChanged(){
         
-        let device = UIDevice.current
-        switch device.orientation {
-        case .portrait, .landscapeLeft, .landscapeRight:
-            if preOrientation != .unknown {
-                if preOrientation != device.orientation {
-                    updateTableView()
-                }
-            }
-            preOrientation = device.orientation
-            break
-        default:
-            break
-        }
+//        let device = UIDevice.current
+//        switch device.orientation {
+//        case .portrait, .landscapeLeft, .landscapeRight:
+//            if preOrientation != .unknown {
+//                if preOrientation != device.orientation {
+//                    updateTableView()
+//                }
+//            }
+//            preOrientation = device.orientation
+//            break
+//        default:
+//            break
+//        }
 
     }
     
@@ -253,6 +263,7 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
         if scrollView == horizontalView {
             let sx = horizontalView.contentOffset.x
             let index = sx.intValue / self.width.intValue

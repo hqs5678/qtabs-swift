@@ -18,8 +18,9 @@ class VC1: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.randomColor()
-        label.frame = self.view.frame
+        
         self.view.addSubview(label)
+        label.layoutInSuperview(0, 0, 0, 0)
         
         
         label.textAlignment = .center
