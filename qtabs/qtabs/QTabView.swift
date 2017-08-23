@@ -17,11 +17,30 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
     fileprivate var controller: UIViewController!
     fileprivate var curIndex = -1
     fileprivate var preOrientation = UIDeviceOrientation.unknown
-    var titleFontSize = 17.f
+    var titleFontSize = 16.f
+    var titleSelectedFontSize = 17.f
     var titlePadding = 10.f
-    lazy var indicator = CALayer()
-    var indicatorHeight = 3.f
-    var indicatorColor = UIColor.gray
+    fileprivate lazy var indicator = CALayer()
+    var indicatorHeight = 3.f {
+        didSet{
+            didSetIndicatorHeight()
+        }
+    }
+    var indicatorColor = UIColor.brown {
+        didSet{
+            indicator.backgroundColor = indicatorColor.cgColor
+        }
+    }
+    var titleNormalColor = UIColor.black {
+        didSet{
+            titleView.reloadData()
+        }
+    }
+    var titleSelectedColor = UIColor.brown {
+        didSet{
+            titleView.reloadData()
+        }
+    }
     
     fileprivate var preX = 0.f
     
@@ -31,7 +50,7 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
         }
     }
      
-    var titleFrames: [CGRect]!
+    var titleBounds: [CGRect]!
     lazy var titleLabelFrames = [Int : CGRect]()
     
     override init(frame: CGRect) {
@@ -81,6 +100,11 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
         
     }
     
+    func didSetIndicatorHeight(){
+        indicator.height = indicatorHeight
+        indicator.y = self.height - indicatorHeight
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         
@@ -109,10 +133,10 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
     }
     
     func didSetTitles(){
-        titleFrames = [CGRect]()
+        titleBounds = [CGRect]()
         for t in titles {
             let frame = t.boundWithSize(CGSize(width: 100, height: self.height), font: UIFont.systemFont(ofSize: titleFontSize))
-            titleFrames.append(frame)
+            titleBounds.append(frame)
         }
         titleView.reloadData()
         self.tableView(titleView, didSelectRowAt: 0)
@@ -175,7 +199,7 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
             return self.width
         }
         else{
-            return titleFrames[index].size.width + titlePadding + titlePadding
+            return titleBounds[index].size.width + titlePadding + titlePadding
         }
     }
     
@@ -193,12 +217,16 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
         }
         else{
             let cell = tableView.dequeueReusableCell(withReuseIdentifier: ItemCell.className, for: index) as! ItemCell
-            var frame = titleFrames[index]
-            frame.origin.x = titlePadding
-            frame.origin.y = (titleView.height - frame.size.height) * 0.5
-            cell.titleLabel.frame = frame
+            
             cell.titleLabel.text = titles[index]
-            cell.titleLabel.font = UIFont.systemFont(ofSize: titleFontSize)
+            cell.titleBound = titleBounds[index]
+            cell.fontNormalSize = titleFontSize
+            cell.fontSelectedSize = titleSelectedFontSize
+            cell.textColorNormal = titleNormalColor
+            cell.textColorSelected = titleSelectedColor
+            cell.titlePadding = titlePadding
+            cell.cellHeight = self.titleView.height
+            cell.updateUI()
             
             return cell
         }
@@ -386,6 +414,13 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
 
 fileprivate class ItemCell: QHorizontalTableViewCell {
     var titleLabel: UILabel!
+    var cellHeight = 0.f
+    var titlePadding = 0.f
+    var fontNormalSize = 0.f
+    var fontSelectedSize = 0.f
+    var textColorNormal: UIColor!
+    var textColorSelected: UIColor!
+    var titleBound: CGRect!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -400,6 +435,14 @@ fileprivate class ItemCell: QHorizontalTableViewCell {
     private func setup(){
         titleLabel = UILabel(frame: self.frame)
         self.addSubview(titleLabel)
-        titleLabel.textColor = UIColor.brown
+    }
+    
+    func updateUI(){
+        titleBound.origin.x = titlePadding
+        titleBound.origin.y = (cellHeight - titleBound.size.height) * 0.5
+        titleLabel.frame = titleBound
+        titleLabel.font = UIFont.systemFont(ofSize: fontNormalSize)
+        titleLabel.textColor = textColorNormal
+
     }
 }

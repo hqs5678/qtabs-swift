@@ -15,6 +15,10 @@ class ViewController: UIViewController {
         
         let tabs = QTabView(frame: self.view.frame)
         self.view.addSubview(tabs)
+        let blue = UIColor(hexString: "1c50f6")
+        tabs.indicatorColor = blue
+        tabs.titleNormalColor = UIColor.darkGray
+        tabs.titleSelectedColor = blue
         
         tabs.layoutInSuperview(22, 0, 0, 0)
         tabs.titles = ["推荐", "娱乐明星", "体育", "新热点", "新闻", "帅哥", "美女"]
