@@ -60,7 +60,7 @@ for i in 0 ..< tabs.titles.count {
     let vc = VC1()
     vc.index = "\(tabs.titles[i]) \(i)"
     
-    // 已addChildViewController 的方式设置标签页内容
+    // 以 addChildViewController 的方式设置标签页内容
     self.addChildViewController(vc)
 }
 
