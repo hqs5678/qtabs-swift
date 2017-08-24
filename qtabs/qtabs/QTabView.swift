@@ -388,8 +388,7 @@ open class QTabView: UIView, QHorizontalTableViewDelegate {
     open func adjustTitleViewToCenter(){
         
         let index = horizontalView.contentOffset.x.intValue / self.width.intValue
-        let cell = self.tableView(titleView, cellForItemAt: index) as! ItemCell
-        let rect = cell.titleLabel.convert(cell.titleLabel.bounds, to: self) as CGRect
+        let rect = titleLabelFrames[index]!
         let targetCenter = centerX(rect: rect)
         var x = targetCenter - self.width * 0.5
         if x < 0 {
