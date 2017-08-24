@@ -17,7 +17,7 @@
 ### 安装说明
 ### CocoaPods
 ```
-      source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 
 target 'TargetName' do
@@ -67,7 +67,7 @@ for i in 0 ..< tabs.titles.count {
 ```
 
 ### 注意
-==tabs.titles.count== 要和 ==self.childViewControllers.count== 一致！！！
+tabs.titles.count 要和 self.childViewControllers.count 一致！！！
 
 
 如有其他问题， 请下载运行项目，参考示例代码（Demo分支）。
