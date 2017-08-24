@@ -1,0 +1,6 @@
+framework module QSExtensionSwift {
+  umbrella header "QSExtensionSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}
