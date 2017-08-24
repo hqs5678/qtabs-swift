@@ -11,7 +11,10 @@ import UIKit
 
 open class QHorizontalTableView: UICollectionView {
     
-
+    
+    fileprivate var preOrientation = UIDeviceOrientation.unknown
+    fileprivate var contentOffsetX = 0.f
+    
     weak public var tableViewDelegate: QHorizontalTableViewDelegate! {
         didSet{
             viewLayout.delegate = tableViewDelegate
@@ -48,11 +51,31 @@ open class QHorizontalTableView: UICollectionView {
         self.dataSource = self
         self.delegate = self
         
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(deviceOrientationDidChanged), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
         self.addObserver(self, forKeyPath: "contentInset", options: [.new, .old], context: nil)
     }
     
+    open func deviceOrientationDidChanged(){
+      
+        let device = UIDevice.current
+        switch device.orientation {
+        case .portrait, .landscapeLeft, .landscapeRight:
+            if preOrientation != device.orientation {
+                updateTableView()
+            }
+            preOrientation = device.orientation
+            break
+        default:
+            break
+        }
+    }
+    
+    open func updateTableView(){
+        self.contentOffset = CGPoint(x: self.contentOffsetX, y: 0)
+    }
+    
     open override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        contentOffsetX = self.contentOffset.x
         if self.contentInset != UIEdgeInsets.zero {
             self.contentInset = UIEdgeInsets()
         }
@@ -65,6 +88,7 @@ open class QHorizontalTableView: UICollectionView {
     
     deinit {
         self.removeObserver(self, forKeyPath: "contentInset")
+        NotificationCenter.default.removeObserver(self)
     }
     
 }
@@ -108,27 +132,39 @@ extension QHorizontalTableView: UICollectionViewDataSource, UICollectionViewDele
     }
     
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        tableViewDelegate.scrollViewDidScroll?(scrollView)
+        if let tableViewDelegate = tableViewDelegate {
+            tableViewDelegate.scrollViewDidScroll?(scrollView)
+        }
     }
     
     public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        tableViewDelegate.scrollViewDidEndDecelerating?(scrollView)
+        if let tableViewDelegate = tableViewDelegate {
+            tableViewDelegate.scrollViewDidEndDecelerating?(scrollView)
+        }
     }
     
     public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        tableViewDelegate.scrollViewDidEndDragging?(scrollView, willDecelerate: decelerate)
+        if let tableViewDelegate = tableViewDelegate {
+            tableViewDelegate.scrollViewDidEndDragging?(scrollView, willDecelerate: decelerate)
+        }
     }
     
     public func scrollViewDidScrollToTop(_ scrollView: UIScrollView) {
-        tableViewDelegate.scrollViewDidScrollToTop?(scrollView)
+        if let tableViewDelegate = tableViewDelegate {
+            tableViewDelegate.scrollViewDidScrollToTop?(scrollView)
+        }
     }
     
     public func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
-        tableViewDelegate.scrollViewWillBeginDecelerating?(scrollView)
+        if let tableViewDelegate = tableViewDelegate {
+            tableViewDelegate.scrollViewWillBeginDecelerating?(scrollView)
+        }
     }
     
     public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        tableViewDelegate.scrollViewWillEndDragging?(scrollView, withVelocity: velocity, targetContentOffset: targetContentOffset)
+        if let tableViewDelegate = tableViewDelegate {
+            tableViewDelegate.scrollViewWillEndDragging?(scrollView, withVelocity: velocity, targetContentOffset: targetContentOffset)
+        }
     }
 }
 

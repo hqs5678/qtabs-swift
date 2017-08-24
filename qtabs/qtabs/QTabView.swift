@@ -145,26 +145,26 @@ open class QTabView: UIView, QHorizontalTableViewDelegate {
     
     open func deviceOrientationDidChanged(){
         
-//        let device = UIDevice.current
-//        switch device.orientation {
-//        case .portrait, .landscapeLeft, .landscapeRight:
-//            if preOrientation != .unknown {
-//                if preOrientation != device.orientation {
-//                    updateTableView()
-//                }
-//            }
-//            preOrientation = device.orientation
-//            break
-//        default:
-//            break
-//        }
+        let device = UIDevice.current
+        switch device.orientation {
+        case .portrait, .landscapeLeft, .landscapeRight:
+            if preOrientation != .unknown {
+                if preOrientation != device.orientation {
+                    updateTableView()
+                }
+            }
+            preOrientation = device.orientation
+            break
+        default:
+            break
+        }
 
     }
     
     open func updateTableView(){
         
-        titleView.width = self.width
-        titleView.reloadData()
+//        titleView.width = self.width
+//        titleView.reloadData()
         print(curIndex)
         horizontalView.reloadData()
         if curIndex != -1 {
