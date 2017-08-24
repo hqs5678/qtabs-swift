@@ -24,8 +24,9 @@ class ViewController: UIViewController {
         tabs.indicatorColor = blue
         tabs.titleNormalColor = UIColor.darkGray
         tabs.titleSelectedColor = blue
+        tabs.indicatorHeight = 2
         tabs.titleBackgroundColor = UIColor.lightGray.withAlphaComponent(0.3)
-        tabs.layoutInSuperview(64, 0, 0, 0)
+        tabs.layoutInSuperview(20, 0, 0, 0)
         tabs.titles = ["推荐", "娱乐明星", "体育", "新热点", "新闻", "帅哥", "美女", "娱乐明星", "体育", "新热点", "新闻", "帅哥", "美女"]
         
         for i in 0 ..< tabs.titles.count {
