@@ -15,8 +15,8 @@ open class QTabView: UIView, QHorizontalTableViewDelegate {
     fileprivate var horizontalView: QHorizontalTableView!
     fileprivate var titleView: QHorizontalTableView!
     fileprivate var controller: UIViewController!
-    fileprivate var curIndex = 0
-    fileprivate var preOrientation = UIDeviceOrientation.unknown
+    fileprivate lazy var curIndex = 0
+    fileprivate lazy var preOrientation = UIDeviceOrientation.unknown
     open var titleFontSize = 17.f
     open var titlePadding = 10.f
     fileprivate lazy var indicator = CALayer()
@@ -269,6 +269,8 @@ open class QTabView: UIView, QHorizontalTableViewDelegate {
             
             let offset = sx - index.f * self.width
             if offset == 0 {
+                curIndex = index
+                titleView.reloadData()
                 return
             }
             let nextIndex = index + 1
@@ -414,13 +416,13 @@ open class QTabView: UIView, QHorizontalTableViewDelegate {
         let point = CGPoint(x: x, y: 0)
         titleView.setContentOffset(point, animated: true)
     }
-    
-    open func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        if scrollView == horizontalView {
-            curIndex = (scrollView.contentOffset.x / self.width).intValue
-            titleView.reloadData()
-        }
-    }
+//    
+//    open func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+//        if scrollView == horizontalView {
+//            curIndex = (scrollView.contentOffset.x / self.width).intValue
+//            titleView.reloadData()
+//        }
+//    }
     
     deinit {
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
