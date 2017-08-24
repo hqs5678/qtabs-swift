@@ -249,8 +249,7 @@ open class QTabView: UIView, QHorizontalTableViewDelegate {
         
         if tableView == titleView {
             
-            let cell = self.tableView(titleView, cellForItemAt: index) as! ItemCell
-            let rect = cell.titleLabel.convert(cell.titleLabel.bounds, to: self) as CGRect
+            let rect = titleLabelFrames[index]!
             indicator.x = rect.origin.x
             indicator.width = rect.size.width
         
