@@ -103,7 +103,7 @@ open class QTabView: UIView, QHorizontalTableViewDelegate {
     
     open func didSetIndicatorHeight(){
         indicator.height = indicatorHeight
-        indicator.y = self.height - indicatorHeight
+        indicator.y = self.titleView.height - indicatorHeight
     }
     
     override open func layoutSubviews() {
