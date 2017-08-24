@@ -49,7 +49,7 @@ open class QTabView: UIView, QHorizontalTableViewDelegate {
     lazy open var titleBounds = [CGRect]()
     lazy open var titleLabelFrames = [Int : CGRect]()
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
@@ -59,7 +59,7 @@ open class QTabView: UIView, QHorizontalTableViewDelegate {
         setup()
     }
     
-    private func setup(){
+    open func setup(){
         
         self.backgroundColor = UIColor.white
         
@@ -429,7 +429,7 @@ open class ItemCell: QHorizontalTableViewCell {
         }
     }
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
@@ -439,7 +439,7 @@ open class ItemCell: QHorizontalTableViewCell {
         setup()
     }
     
-    private func setup(){
+    open func setup(){
         titleLabel = UILabel(frame: self.frame)
         self.addSubview(titleLabel)
     }
