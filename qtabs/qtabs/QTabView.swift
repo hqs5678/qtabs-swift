@@ -148,10 +148,8 @@ open class QTabView: UIView, QHorizontalTableViewDelegate {
         let device = UIDevice.current
         switch device.orientation {
         case .portrait, .landscapeLeft, .landscapeRight:
-            if preOrientation != .unknown {
-                if preOrientation != device.orientation {
-                    updateTableView()
-                }
+            if preOrientation != device.orientation {
+                updateTableView()
             }
             preOrientation = device.orientation
             break
@@ -166,10 +164,19 @@ open class QTabView: UIView, QHorizontalTableViewDelegate {
 //        titleView.width = self.width
 //        titleView.reloadData()
         print(curIndex)
+        
         horizontalView.reloadData()
         if curIndex != -1 {
-            horizontalView.setContentOffset(CGPoint(x: curIndex.f * self.width, y: 0), animated: false)
+            doInMainThreadAfter(0.5, task: { 
+                
+            })
+            self.horizontalView.setContentOffset(CGPoint(x: self.curIndex.f * self.width, y: 0), animated: false)
         }
+    }
+    
+    public func doInMainThreadAfter(_ delay:Double, task:@escaping ()->()) {
+        DispatchQueue.main.asyncAfter(
+            deadline: DispatchTime.now() + DispatchTimeInterval.milliseconds(Int(delay * 1000)), execute: task)
     }
     
     
@@ -251,13 +258,17 @@ open class QTabView: UIView, QHorizontalTableViewDelegate {
     open func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         if scrollView == horizontalView {
+            
+            // 是否需要调整标题位置居中
+            var adjustTitleView = true
+            if  titleView.contentSize.width - self.width <= 0 {
+                adjustTitleView = false
+            }
             let sx = horizontalView.contentOffset.x
             let index = sx.intValue / self.width.intValue
             
             let offset = sx - index.f * self.width
             if offset == 0 {
-                curIndex = index
-                titleView.reloadData()
                 return
             }
             let nextIndex = index + 1
@@ -296,19 +307,19 @@ open class QTabView: UIView, QHorizontalTableViewDelegate {
                 left = rect0.origin.x
                 right = rect0.maxX
                 
-                if c0 + d - self.width * 0.5 > titleView.contentSize.width - self.width {
-                    d -= c0 + d + self.width * 0.5 - titleView.contentSize.width
+                if adjustTitleView {
+                    if c0 + d - self.width * 0.5 > titleView.contentSize.width - self.width {
+                        d -= c0 + d + self.width * 0.5 - titleView.contentSize.width
+                    }
+                    else if c0 - self.width  * 0.5 < 0 {
+                        d -= self.width * 0.5 - c0
+                    }
+                    var ox = c0 - self.width * 0.5
+                    if ox < 0 {
+                        ox = 0
+                    }
+                    px = ox + d * t
                 }
-                else if c0 - self.width  * 0.5 < 0 {
-                    d -= self.width * 0.5 - c0
-                }
-                var ox = c0 - self.width * 0.5
-                if ox < 0 {
-                    ox = 0
-                }
-                px = ox + d * t
-                
-                
             }
             else {
                 a0 = w0 * -2
@@ -323,19 +334,20 @@ open class QTabView: UIView, QHorizontalTableViewDelegate {
                 t = 1 - t
                 direct = -1.f
                 
-                var flag = true
-                if c0 - self.width * 0.5 < 0 {
-                    d -= self.width * 0.5 - c0
-                    px = c1 - d * t - self.width * 0.5
-                    flag = false
+                if adjustTitleView {
+                    var flag = true
+                    if c0 - self.width * 0.5 < 0 {
+                        d -= self.width * 0.5 - c0
+                        px = c1 - d * t - self.width * 0.5
+                        flag = false
+                    }
+                    else if c0 + d + self.width * 0.5 > titleView.contentSize.width {
+                        d -= c0 + d + self.width * 0.5 - titleView.contentSize.width
+                    }
+                    if flag {
+                        px = c0 + d * (1 - t) - self.width * 0.5
+                    }
                 }
-                else if c0 + d + self.width * 0.5 > titleView.contentSize.width {
-                    d -= c0 + d + self.width * 0.5 - titleView.contentSize.width
-                }
-                if flag {
-                    px = c0 + d * (1 - t) - self.width * 0.5
-                }
-                
             }
             
             left += (v0 * t + 0.5 * a0 * t * t) * direct
@@ -346,20 +358,20 @@ open class QTabView: UIView, QHorizontalTableViewDelegate {
             indicator.x = left
             indicator.width = right - left
             
-            if px < 0 {
-                px = 0
-            }
-            else {
-                let maxX = titleView.contentSize.width - self.width
-                if px > maxX {
-                    px = maxX
+            if adjustTitleView {
+                if px < 0 {
+                    px = 0
                 }
+                else {
+                    let maxX = titleView.contentSize.width - self.width
+                    if px > maxX && maxX > 0 {
+                        px = maxX
+                    }
+                }
+                let point = CGPoint(x: px, y: 0)
+                titleView.contentOffset = point
             }
-            let point = CGPoint(x: px, y: 0)
-            titleView.contentOffset = point
-            
             CATransaction.commit()
-            
             
             preX = sx
         }
@@ -406,6 +418,7 @@ open class QTabView: UIView, QHorizontalTableViewDelegate {
     open func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if scrollView == horizontalView {
             curIndex = (scrollView.contentOffset.x / self.width).intValue
+            titleView.reloadData()
         }
     }
     

@@ -72,6 +72,7 @@ open class QHorizontalTableView: UICollectionView {
     
     open func updateTableView(){
         self.contentOffset = CGPoint(x: self.contentOffsetX, y: 0)
+        self.viewLayout.clearLayoutAttributes()
     }
     
     open override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -210,6 +211,9 @@ open class LinearLayout: UICollectionViewLayout {
         return layoutAttributes
     }
     
+    open func clearLayoutAttributes() {
+        self.layoutAttributes.removeAll()
+    }
     
     override open func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
         let attr = UICollectionViewLayoutAttributes(forCellWith: indexPath)
