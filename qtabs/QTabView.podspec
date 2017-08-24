@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "QTabView"
   s.version      = "1.0.0"
-  s.summary      = "A tab view with more than one page. It can be used for news, subjects..."
+  s.summary      = "A tab view with more than one page. It can be used for news"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,11 +25,11 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                    qtabs
-                    tabs
-                    tabview
-                    tab view
-                    qtabs
+
+    QTabView
+    A tab view with more than one page. It can be used for news, projects, and so on.
+    
+
                    DESC
 
   s.homepage     = "https://github.com/hqs5678/qtabs-swift"
