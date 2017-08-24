@@ -169,15 +169,13 @@ open class QTabView: UIView, QHorizontalTableViewDelegate {
     
     open func updateTableView(){
         
-//        titleView.width = self.width
-//        titleView.reloadData()
-        print(curIndex)
+        if self.width + titleView.contentOffset.x > titleView.contentSize.width {
+            let px = titleView.contentSize.width - self.width
+            titleView.contentOffset = CGPoint(x: px, y: 0)
+        }
         
         horizontalView.reloadData()
         if curIndex != -1 {
-            doInMainThreadAfter(0.5, task: { 
-                
-            })
             self.horizontalView.setContentOffset(CGPoint(x: self.curIndex.f * self.width, y: 0), animated: false)
         }
     }
