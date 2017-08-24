@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "QTabView"
-  s.version      = "1.0.1"
+  s.version      = "1.0.0"
   s.summary      = "A tab view with more than one page. It can be used for news"
 
   # This description is used to generate tags and improve search results.
