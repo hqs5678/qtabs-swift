@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         tabs.indicatorColor = blue
         tabs.titleNormalColor = UIColor.darkGray
         tabs.titleSelectedColor = blue
-        
+        tabs.titleBackgroundColor = UIColor.lightGray.withAlphaComponent(0.3)
         tabs.layoutInSuperview(64, 0, 0, 0)
         tabs.titles = ["推荐", "娱乐明星", "体育", "新热点", "新闻", "帅哥", "美女"]
         
@@ -33,10 +33,6 @@ class ViewController: UIViewController {
             self.addChildViewController(vc)
         }
     }
-    
-//    override func viewDidAppear(_ animated: Bool) {
-//        tabs.titleView.reloadData()
-//    }
 
 
 }

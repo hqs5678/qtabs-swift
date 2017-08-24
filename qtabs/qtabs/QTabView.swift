@@ -10,54 +10,51 @@ import UIKit
 import QHorizontalTableView
 import QSExtensionSwift
 
-class QTabView: UIView, QHorizontalTableViewDelegate {
+open class QTabView: UIView, QHorizontalTableViewDelegate {
     
-    var horizontalView: QHorizontalTableView!
-    var titleView: QHorizontalTableView!
+    fileprivate var horizontalView: QHorizontalTableView!
+    fileprivate var titleView: QHorizontalTableView!
     fileprivate var controller: UIViewController!
     fileprivate var curIndex = 0
     fileprivate var preOrientation = UIDeviceOrientation.unknown
-    var titleFontSize = 17.f
-    var titlePadding = 10.f
+    open var titleFontSize = 17.f
+    open var titlePadding = 10.f
     fileprivate lazy var indicator = CALayer()
-    var indicatorHeight = 3.f {
+    open var indicatorHeight = 3.f {
         didSet{
             didSetIndicatorHeight()
         }
     }
-    var indicatorColor = UIColor.brown {
+    open var indicatorColor = UIColor.brown {
         didSet{
             indicator.backgroundColor = indicatorColor.cgColor
         }
     }
-    var titleNormalColor = UIColor.black {
+    open var titleNormalColor = UIColor.black
+    open var titleSelectedColor = UIColor.brown
+    open var titleBackgroundColor = UIColor.white {
         didSet{
-            titleView.reloadData()
-        }
-    }
-    var titleSelectedColor = UIColor.brown {
-        didSet{
-            titleView.reloadData()
+            titleView.backgroundColor = titleBackgroundColor
         }
     }
     
     fileprivate var preX = 0.f
     
-    var titles: [String]! {
+    open var titles: [String]! {
         didSet{
             didSetTitles()
         }
     }
      
-    lazy var titleBounds = [CGRect]()
-    lazy var titleLabelFrames = [Int : CGRect]()
+    lazy open var titleBounds = [CGRect]()
+    lazy open var titleLabelFrames = [Int : CGRect]()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
@@ -80,7 +77,6 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
         titleView.showsHorizontalScrollIndicator = false
         titleView.bounces = false
         titleView.tableViewDelegate = self
-        titleView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.3)
         titleView.register(ItemCell.classForCoder(), forCellWithReuseIdentifier: ItemCell.className)
         
         indicator.frame = CGRect(x: 0, y: titleView.height - indicatorHeight, width: 39, height: indicatorHeight)
@@ -98,23 +94,19 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
         let height = NSLayoutConstraint(item: titleView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 50)
         NSLayoutConstraint.activate([left, right, top, height])
         horizontalView.layoutInSuperview(50, 0, 0, 0)
-//        self.addConstraints([left, right, top])
-//        titleView.addConstraint(height)
         
         horizontalView.register(QHorizontalTableViewCell.classForCoder(), forCellWithReuseIdentifier: QHorizontalTableViewCell.className)
-        
-        
         
         NotificationCenter.default.addObserver(self, selector: #selector(deviceOrientationDidChanged), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
         
     }
     
-    func didSetIndicatorHeight(){
+    open func didSetIndicatorHeight(){
         indicator.height = indicatorHeight
         indicator.y = self.height - indicatorHeight
     }
     
-    override func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         
         if controller == nil {
@@ -141,7 +133,7 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
         }
     }
     
-    func didSetTitles(){
+    open func didSetTitles(){
         titleBounds.removeAll()
         for t in titles {
             let frame = t.boundWithSize(CGSize(width: 100, height: titleView.height), font: UIFont.systemFont(ofSize: titleFontSize))
@@ -151,13 +143,7 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
         self.tableView(titleView, didSelectRowAt: curIndex)
     }
     
-    
-    func doInMainThreadAfter(_ delay:Double, task:@escaping ()->()) {
-        DispatchQueue.main.asyncAfter(
-            deadline: DispatchTime.now() + DispatchTimeInterval.milliseconds(Int(delay * 1000)), execute: task)
-    }
-    
-    func deviceOrientationDidChanged(){
+    open func deviceOrientationDidChanged(){
         
 //        let device = UIDevice.current
 //        switch device.orientation {
@@ -175,7 +161,7 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
 
     }
     
-    func updateTableView(){
+    open func updateTableView(){
         
         titleView.width = self.width
         titleView.reloadData()
@@ -187,7 +173,7 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
     }
     
     
-    func tableViewItemsCount(_ tableView: QHorizontalTableView) -> Int {
+    open func tableViewItemsCount(_ tableView: QHorizontalTableView) -> Int {
         
         if tableView == horizontalView {
             if let controller = controller {
@@ -203,7 +189,7 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
     }
 
     
-    func tableView(_ tableView: QHorizontalTableView, widthForItemAt index: Int) -> CGFloat {
+    open func tableView(_ tableView: QHorizontalTableView, widthForItemAt index: Int) -> CGFloat {
         if tableView == horizontalView {
             return self.width
         }
@@ -212,7 +198,7 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
         }
     }
     
-    func tableView(_ tableView: QHorizontalTableView, cellForItemAt index: Int) -> QHorizontalTableViewCell {
+    open func tableView(_ tableView: QHorizontalTableView, cellForItemAt index: Int) -> QHorizontalTableViewCell {
         
         if tableView == horizontalView {
             let cell = tableView.dequeueReusableCell(withReuseIdentifier: QHorizontalTableViewCell.className, for: index)
@@ -244,7 +230,7 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
         
     }
     
-    func tableView(_ tableView: QHorizontalTableView, didSelectRowAt index: Int) {
+    open func tableView(_ tableView: QHorizontalTableView, didSelectRowAt index: Int) {
         
         if tableView == titleView {
             
@@ -258,11 +244,11 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
         }
     }
     
-    func centerX(rect: CGRect) -> CGFloat {
+    open func centerX(rect: CGRect) -> CGFloat {
         return (rect.maxX + rect.minX) * 0.5
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    open func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         if scrollView == horizontalView {
             let sx = horizontalView.contentOffset.x
@@ -379,7 +365,7 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
         }
     }
     
-    func labelRect(index: Int) -> CGRect{
+    open func labelRect(index: Int) -> CGRect{
         if let rect = titleLabelFrames[index] {
             return rect
         }
@@ -397,7 +383,7 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
         }
     }
     
-    func adjustTitleViewToCenter(){
+    open func adjustTitleViewToCenter(){
         
         let index = horizontalView.contentOffset.x.intValue / self.width.intValue
         let cell = self.tableView(titleView, cellForItemAt: index) as! ItemCell
@@ -417,11 +403,10 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
         titleView.setContentOffset(point, animated: true)
     }
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    open func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if scrollView == horizontalView {
             curIndex = (scrollView.contentOffset.x / self.width).intValue
         }
-        
     }
     
     deinit {
@@ -430,11 +415,12 @@ class QTabView: UIView, QHorizontalTableViewDelegate {
     
 }
 
-fileprivate class ItemCell: QHorizontalTableViewCell {
-    var titleLabel: UILabel!
-    var cellHeight = 0.f
-    var titlePadding = 0.f
-    var titleBound: CGRect! {
+open class ItemCell: QHorizontalTableViewCell {
+    
+    open var titleLabel: UILabel!
+    open var cellHeight = 0.f
+    open var titlePadding = 0.f
+    open var titleBound: CGRect! {
         didSet{
             updateUI()
         }
@@ -445,7 +431,7 @@ fileprivate class ItemCell: QHorizontalTableViewCell {
         setup()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
@@ -455,7 +441,7 @@ fileprivate class ItemCell: QHorizontalTableViewCell {
         self.addSubview(titleLabel)
     }
     
-    func updateUI(){
+    open func updateUI(){
         var frame = titleBound as CGRect
         frame.origin.x = titlePadding
         frame.origin.y = (cellHeight - frame.size.height) * 0.5
