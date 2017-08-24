@@ -20,15 +20,6 @@ open class QHorizontalTableView: UICollectionView {
     
     public var viewLayout: LinearLayout!
     
-    // 使用缓存在table view 内容比较少时可以提高性能, 内容多时可能会占用内存过多, 酌情使用
-    public var useCacheForViewLayout = false {
-        didSet{
-            if let viewLayout = viewLayout {
-                viewLayout.useCache = useCacheForViewLayout
-            }
-        }
-    }
-    
     public override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
         self.viewLayout = layout as? LinearLayout
@@ -51,23 +42,29 @@ open class QHorizontalTableView: UICollectionView {
             viewLayout = LinearLayout()
         }
         
-        viewLayout.scrollDirection = .horizontal
-        viewLayout.minimumLineSpacing = 0
-        viewLayout.minimumInteritemSpacing = 0
-        viewLayout.headerReferenceSize = CGSize.zero
-        viewLayout.footerReferenceSize = CGSize.zero
-        viewLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         viewLayout.tableView = self
         self.collectionViewLayout = viewLayout
         
         self.dataSource = self
         self.delegate = self
         
+        
+        self.addObserver(self, forKeyPath: "contentInset", options: [.new, .old], context: nil)
+    }
+    
+    open override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if self.contentInset != UIEdgeInsets.zero {
+            self.contentInset = UIEdgeInsets()
+        }
     }
     
     public func dequeueReusableCell(withReuseIdentifier identifier: String, for index: Int) -> QHorizontalTableViewCell {
         let indexPath = IndexPath(row: index, section: 0)
         return dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! QHorizontalTableViewCell
+    }
+    
+    deinit {
+        self.removeObserver(self, forKeyPath: "contentInset")
     }
     
 }
@@ -135,48 +132,63 @@ extension QHorizontalTableView: UICollectionViewDataSource, UICollectionViewDele
     }
 }
 
-open class LinearLayout: UICollectionViewFlowLayout {
+open class LinearLayout: UICollectionViewLayout {
     
     weak var delegate: QHorizontalTableViewDelegate!
     weak var tableView: QHorizontalTableView!
-    var useCache = false
+      
+    private lazy var layoutAttributes: [UICollectionViewLayoutAttributes] = []
+    private lazy var w = 0.f
+    private lazy var h = 0.f
+    private lazy var contentSizeW = 0.f
     
-    // 优化性能
-    fileprivate lazy var attrs = [String : [UICollectionViewLayoutAttributes]]()
-    
-    public override init() {
-        super.init()
-    }
-    
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
-    open override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-        if useCache, let array = attrs["\(rect)"] {
-            return array
-        }
-        else{
-            let array = super.layoutAttributesForElements(in: rect)
-            attrs["\(rect)"] = array
-            return array
-        }
+    override open func prepare() {
         
+        if layoutAttributes.count == 0 {
+            
+            w = self.tableView.frame.size.width
+            h = self.tableView.frame.size.height
+            
+            if let collectionView = self.collectionView {
+                let number = collectionView.numberOfItems(inSection: 0)
+                var x = 0.f
+                var cellW = 0.f
+                for i in 0 ..< number {
+                    
+                    cellW = delegate.tableView(tableView, widthForItemAt: i)
+                    
+                    let indexPath = IndexPath(row: i, section: 0)
+                    let attr = layoutAttributesForItem(at: indexPath)
+                    attr?.frame = CGRect(x: x, y: 0, width: cellW, height: h)
+                    
+                    layoutAttributes.append(attr!)
+                    
+                    x += cellW
+                }
+                contentSizeW = x
+            }
+        }
     }
     
-    open override var collectionViewContentSize: CGSize {
-        let size = super.collectionViewContentSize
-        if size.width <= tableView.frame.size.width {
-            return CGSize(width: tableView.frame.size.width + 0.5, height: size.height)
-        }
-        else{
-            return size
-        }
+    override open func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+        return layoutAttributes
     }
     
-    open override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
+    
+    override open func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+        let attr = UICollectionViewLayoutAttributes(forCellWith: indexPath)
+        return attr
+    }
+    
+    override open func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
         return true
     }
+    
+    override open var collectionViewContentSize: CGSize {
+        
+        return CGSize(width: contentSizeW, height: h)
+    }
+
     
 }
 
@@ -207,4 +219,10 @@ open class QHorizontalTableViewCell: UICollectionViewCell {
     @objc optional func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView)
     
     @objc optional func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>)
+}
+
+extension Int {
+    var f: CGFloat {
+        return CGFloat(self)
+    }
 }
