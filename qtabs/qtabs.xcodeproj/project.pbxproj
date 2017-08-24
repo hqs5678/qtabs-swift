@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		B4B7456BD91E3D73633C25AC /* Pods_qtabs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 292F668621D8178473E37381 /* Pods_qtabs.framework */; };
+		BF2A4DFC1F4EB277004878E8 /* QTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2A4DFB1F4EB277004878E8 /* QTabView.swift */; };
 		BFB8116B1F4A7BC80016DADE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB8116A1F4A7BC80016DADE /* AppDelegate.swift */; };
 		BFB8116D1F4A7BC80016DADE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB8116C1F4A7BC80016DADE /* ViewController.swift */; };
 		BFB811701F4A7BC80016DADE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFB8116E1F4A7BC80016DADE /* Main.storyboard */; };
 		BFB811721F4A7BC80016DADE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFB811711F4A7BC80016DADE /* Assets.xcassets */; };
 		BFB811751F4A7BC80016DADE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFB811731F4A7BC80016DADE /* LaunchScreen.storyboard */; };
-		BFB8117D1F4A7CB30016DADE /* QTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB8117C1F4A7CB30016DADE /* QTabView.swift */; };
 		BFB811821F4A8D610016DADE /* VC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB8117E1F4A8D610016DADE /* VC1.swift */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +21,7 @@
 		292F668621D8178473E37381 /* Pods_qtabs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_qtabs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CCE6C9E47652D856CDE0870 /* Pods-qtabs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qtabs.release.xcconfig"; path = "Pods/Target Support Files/Pods-qtabs/Pods-qtabs.release.xcconfig"; sourceTree = "<group>"; };
 		5229A3C838A716B7696B9051 /* Pods-qtabs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qtabs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-qtabs/Pods-qtabs.debug.xcconfig"; sourceTree = "<group>"; };
+		BF2A4DFB1F4EB277004878E8 /* QTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QTabView.swift; sourceTree = "<group>"; };
 		BFB811671F4A7BC80016DADE /* qtabs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qtabs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB8116A1F4A7BC80016DADE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFB8116C1F4A7BC80016DADE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,7 +29,6 @@
 		BFB811711F4A7BC80016DADE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFB811741F4A7BC80016DADE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFB811761F4A7BC80016DADE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BFB8117C1F4A7CB30016DADE /* QTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QTabView.swift; sourceTree = "<group>"; };
 		BFB8117E1F4A8D610016DADE /* VC1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +61,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BF2A4DFA1F4EB277004878E8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BF2A4DFB1F4EB277004878E8 /* QTabView.swift */,
+			);
+			path = Classes;
+			sourceTree = SOURCE_ROOT;
+		};
 		BFB8115E1F4A7BC80016DADE = {
 			isa = PBXGroup;
 			children = (
@@ -82,7 +90,7 @@
 		BFB811691F4A7BC80016DADE /* qtabs */ = {
 			isa = PBXGroup;
 			children = (
-				BFB8117C1F4A7CB30016DADE /* QTabView.swift */,
+				BF2A4DFA1F4EB277004878E8 /* Classes */,
 				BFB8116A1F4A7BC80016DADE /* AppDelegate.swift */,
 				BFB8116C1F4A7BC80016DADE /* ViewController.swift */,
 				BFB8117E1F4A8D610016DADE /* VC1.swift */,
@@ -218,8 +226,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF2A4DFC1F4EB277004878E8 /* QTabView.swift in Sources */,
 				BFB8116D1F4A7BC80016DADE /* ViewController.swift in Sources */,
-				BFB8117D1F4A7CB30016DADE /* QTabView.swift in Sources */,
 				BFB811821F4A8D610016DADE /* VC1.swift in Sources */,
 				BFB8116B1F4A7BC80016DADE /* AppDelegate.swift in Sources */,
 			);
