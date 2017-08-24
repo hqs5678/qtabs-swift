@@ -11,6 +11,11 @@ MIT
 MIT
 
 
+## QTabView
+
+MIT
+
+
 ## SwiftHashing
 
 The MIT License (MIT)

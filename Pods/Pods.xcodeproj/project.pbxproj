@@ -7,233 +7,315 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0228D969C41923D49E6621BC2A6DFE70 /* Pods-qtabs-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4511594A8A70A9F87A69B043790768 /* Pods-qtabs-dummy.m */; };
-		07A8655A981951437DC4B67F6659C417 /* String+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AC54F2B6F469BC8DE6873D414E5AD2 /* String+Size.swift */; };
-		08B649E66CFB2EEA3529E7688A265F0A /* UIView+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113E08DB6F06E018D294B1DEB6EF9485 /* UIView+Frame.swift */; };
-		099BD30168CDDF5098D88C961E9EC306 /* UITextField+Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0FA95A6B274957ED92900EF740F07C /* UITextField+Text.swift */; };
-		1B5F6D89C042207269AAC57FD6A273F7 /* SwiftHashing-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9023370053643D0F20583CB57041E6D2 /* SwiftHashing-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1CAFBFB869917473B745CEAEFB0B0A80 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3708BCEABA75FA80B92971AC0F04C3 /* UIKit.framework */; };
-		2157D66562982F7E97331CAFBFCAD3FC /* Date+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA56B5B7A7756A60C60B0C3EEE8DF4C /* Date+Components.swift */; };
-		28C4DF028AAAF1BA69820D1E6C7AAE85 /* UITextView+Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A89114A5CC3BCD60657D90543BC62 /* UITextView+Text.swift */; };
-		30B1E6A2C903E87CF4B19AF10C489E1F /* NSNumber+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4130B1D6BDBBD2BC817FC246A9D51A /* NSNumber+Random.swift */; };
-		3602100E20101F8A0778429E86AB0DC2 /* SwiftHashing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3685A8CB1DE78B8F19F57BF7BB1E6C80 /* SwiftHashing.framework */; };
-		3755914822DB3565C97DDA846F894BAB /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DD056AC5A7C55BDF00BBAE50D98A94 /* UIViewController+Navigation.swift */; };
-		3B71B0CEDC78517E65384C6E913C7678 /* UITableViewCell+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C4F10545374DD708FE6FE6B6FD5417 /* UITableViewCell+Style.swift */; };
-		3DC7B9FB4E834064644719EED763BE39 /* UIImageView+OSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5404582BC25B3CE53036125F2ED2EB21 /* UIImageView+OSS.swift */; };
-		3EFC0B41BF7679BBF5267FAD5DD0574B /* UINavigationController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458438B469717D3E21F05FF190A6140E /* UINavigationController+Navigation.swift */; };
-		410DDEAD22E96CAA3C96F89F4D408317 /* UILabel+Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3DBB793716621B2459CC7A912F3526 /* UILabel+Text.swift */; };
-		4134B5A00385AB8726393B5A2468148D /* String+Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2130B61C536C837DE48F50BD7E5240AC /* String+Verification.swift */; };
-		4155D1B3D857A9FCB0034FA7D876B26A /* NSData+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA366CCC2933B721D26D550834130340 /* NSData+String.swift */; };
-		43E17673E37807E766E139A6402C974C /* UILabel+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6681751675055BFEFDEA011C277D063F /* UILabel+Size.swift */; };
-		4506D21871E19D95A910D6DDD3267DB8 /* UIColor+ST.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC83FBA342EAD2033B9C4ADC2EEA29D0 /* UIColor+ST.swift */; };
-		4A3B7FF2B6A7C55E9B733AEC7A1C731F /* CALayer+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A198255122EE0B4A57F2950D854D4759 /* CALayer+Frame.swift */; };
-		4E5E0E87698FAE1E9989C05FF1030DB3 /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C86494FD63B0436D2D982485292418 /* UIImage+Color.swift */; };
-		514612D94344B7F47172F1998B7E1D4E /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92308854FFF8E0F47CD26E64F343B65D /* UIImage+Resize.swift */; };
-		54F634B56699B64F13E8AAF42DB397C0 /* Pods-qtabs-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 07F035D3A2FCE1911473544D16265E15 /* Pods-qtabs-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5DA97B5E8606232133771914A946489B /* QHorizontalTableView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD2E95C31C119CFD346323E59F3DD94 /* QHorizontalTableView-dummy.m */; };
-		61671883DF55E2024AF4AF60C136DAC7 /* UISearchBar+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E335FB074AFB21C60B19A593613D56D /* UISearchBar+Style.swift */; };
-		6479C8D07082063FF3A8B0D541D1287F /* QHorizontalTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA49BB3CA4628E60D01434C8EE0324B /* QHorizontalTableView.swift */; };
-		73CAC7A9A0DF195AC55B0975DB3EDF11 /* UIView+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE7E5B3F71194B2C6F74396275EE813 /* UIView+Tap.swift */; };
-		83CC93EF99CEC6BD9EDB01D5CF08F06F /* SwiftHashing.h in Headers */ = {isa = PBXBuildFile; fileRef = C1B710F2BC42CCAC135530BF0DD70A0A /* SwiftHashing.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		87539F0E9DCD65C4677A204F99A698F6 /* UIView+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA3C0FDDFFD36BAB07815FBC2177D60 /* UIView+Appearance.swift */; };
-		91998EEA5C96BA1E803BDC30F1E82897 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6543D5DD0FD5ABE96528265F93C17C8B /* Foundation.framework */; };
-		95DD600DDC240945D3B3CFF2285BA710 /* CALayer+Sublayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9DC6AE5CA134571C7759A858453D6 /* CALayer+Sublayer.swift */; };
-		A0305A5F0882C3AE140235834FF78876 /* String+Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AB892BCE4598113879C6B084E7506 /* String+Json.swift */; };
-		A4A4BB2F8330D338793C8EB44488E51E /* UIView+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776E793AE754B0E1B30510DC0AF58772 /* UIView+Toast.swift */; };
-		AD56B0ADD96551258BBD1FC90F550B48 /* SwiftHashing-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A60CCC63B0553E74F73B40DF20479245 /* SwiftHashing-dummy.m */; };
-		B49C6BFE3023CBCEDB89E0B680FA4A37 /* NSArray+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEE0BF50937A7CE8C35763651616FBD /* NSArray+String.swift */; };
-		B6DAC1DAB6EE378024041179788BA004 /* QHorizontalTableView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F868DFBCB61595D732B0E7404720B226 /* QHorizontalTableView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BAE2923D684817F01F93FD0D0BE482C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6543D5DD0FD5ABE96528265F93C17C8B /* Foundation.framework */; };
-		BDE56DF39B3F3638C6218F2A9E9BE05B /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9360737D8667C548628CDC583F272AB8 /* UILabel+Style.swift */; };
-		C471AF4679B023DB200FF835F432E993 /* SwiftHashing.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F206E89911D531FA9AF6D9F81D8A32 /* SwiftHashing.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		C474E18AECF1985BF1CA48795FF9C2A3 /* UIImage+RoundCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7025024606901A5F1AFE23495B1B35 /* UIImage+RoundCorner.swift */; };
-		C6D3B94C14FBC4BECD05428D17407324 /* UIView+Subview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFDE942969979659D55F53C6C6E36DA /* UIView+Subview.swift */; };
-		C85824390F7FAD9D5DC468D663321630 /* UITabBarController+TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE878389A15ADC1FB19E73D62CF1400 /* UITabBarController+TabBar.swift */; };
-		CEB78D3C3074DA7E5B7FBA1D5EBB7955 /* NSDictionary+Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDB7B9E517BD1BAC1F8348D46DB0138 /* NSDictionary+Json.swift */; };
-		D3B62C74ADB2FAE8018161EEFDD24972 /* QSExtensionSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AA2D6B4A20FBCD25F0ED36379EF3D91D /* QSExtensionSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D3B6B1F8AB42CBD8FEA6E00EBC1722F2 /* QSExtensionSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F87B7B842F2788DB0CC75BD95B3D0B86 /* QSExtensionSwift-dummy.m */; };
-		D5AE4434A290B850D971723C0377CAD5 /* String+Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B7B63947CC4E791DA09EE583270D1 /* String+Security.swift */; };
-		D81E09E14820A8911F9DEEB984CF3648 /* UIView+Constaint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948FF9E4CA87E8BDF289EB050A9D027D /* UIView+Constaint.swift */; };
-		DF6021062FBB6C45290283000FC077D8 /* String+Substring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE928C3627F3D54575F68349BD38D73 /* String+Substring.swift */; };
-		E4E13BF51642EDF5706DFF3C8B942872 /* NSNumber+ Converte.swift in Sources */ = {isa = PBXBuildFile; fileRef = E085B77B2D5D3ED52039DBA6DF65E6EB /* NSNumber+ Converte.swift */; };
-		E8225EE870779A191BC7A7158A81FC4E /* UIImage+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1DED8D4C8233F9C1136F23454CCAC0 /* UIImage+Cache.swift */; };
-		E8849B8C4ED61765E7E378158EA2420C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6543D5DD0FD5ABE96528265F93C17C8B /* Foundation.framework */; };
-		F44608DE673BDE6405FD46E7015C8BE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6543D5DD0FD5ABE96528265F93C17C8B /* Foundation.framework */; };
-		F46682C1CAAB38FCF474B1E46D4C0CC6 /* NSObject+Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C6D99B88282C581A7B8B7F62E55DA9 /* NSObject+Class.swift */; };
-		F7285A6F2362038D054FF1097A598D85 /* UIViewController+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB412E84C8096FD279F2B8D20457AB01 /* UIViewController+Toast.swift */; };
-		FEEC531E8E7F48B53597FDEFB0F7AC43 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3708BCEABA75FA80B92971AC0F04C3 /* UIKit.framework */; };
+		00CC4AC24EC3BE6C33893C54D7FEB624 /* QTabView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DDD16262728F8DB4B7463A4C3C1A6F /* QTabView-dummy.m */; };
+		058E4ED3C24AD24506175609544F81BD /* SwiftHashing.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF84A423649B54C45A6FC9CDB9332B5 /* SwiftHashing.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0B739701E25B6A16F8931143B936A0B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B5792E12E516554FA817D96949C821 /* Foundation.framework */; };
+		11F7B5AF3D4504F60E8209419DE54D8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B5792E12E516554FA817D96949C821 /* Foundation.framework */; };
+		1294E0CF475545CA4A05B03572ACBDF9 /* NSData+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EF50D2176D5D3E8B2F6386DFBFD779 /* NSData+String.swift */; };
+		12A4C5DF50D3C01C78DD75A82B2BAC39 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B5792E12E516554FA817D96949C821 /* Foundation.framework */; };
+		174C7545DCA6C89702C0913FCC3E3D64 /* UIView+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAC16B89482C97AD7205FB7D78DE5E2 /* UIView+Tap.swift */; };
+		19C3B1BBFEC407E11878BD8BE68956C3 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D29BA903CC2CAE137DAAB85A195A253 /* UILabel+Style.swift */; };
+		1E53F5CB4B27B357B984767D044FE2A2 /* String+Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376CE37FE502F0FC376E139C2E7438A4 /* String+Json.swift */; };
+		1E608C643470F2414D31B58929966319 /* NSObject+Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9DFB44A8104581327AC3127031CA88 /* NSObject+Class.swift */; };
+		1EB6A42EE21C25D4F6E26D52DC7C0B2D /* SwiftHashing-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FF55CE27C0FFD6A22E7D81B8AB1668C /* SwiftHashing-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2109536FC9B29864AF580720F0B93078 /* UINavigationController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EEB9BA5A1D2ACD6834C339A23BB054 /* UINavigationController+Navigation.swift */; };
+		210A46306AD51F059D29B3703254B833 /* UITextView+Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ACD2D205B53C448555A411CD89520E /* UITextView+Text.swift */; };
+		2596E899C46DB09BFC0D9D1C075F0A60 /* Pods-qtabs-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 07F035D3A2FCE1911473544D16265E15 /* Pods-qtabs-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3118E09B06A4EE220DADE30D8C823B5B /* UIView+Subview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FB95D83D6E5B0BC42E494734AF08E5 /* UIView+Subview.swift */; };
+		36D0C71C419E49D5C723E66F009EE857 /* UIImage+RoundCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04AB480090A913F8FAC876907418A9 /* UIImage+RoundCorner.swift */; };
+		36EC2D10A4927AA2F5B1AA0849AA96A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B5792E12E516554FA817D96949C821 /* Foundation.framework */; };
+		3C0EB9D3F6BA1067FE55B4EA0209D773 /* UILabel+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725C8326A5FA7494B4D9E59A018E9029 /* UILabel+Size.swift */; };
+		40522415726D236F6207D9785F543AE5 /* SwiftHashing-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2485BE48E18A446A65DAA07694EFF1 /* SwiftHashing-dummy.m */; };
+		4079566AC3B7B96CE3BFAE5FAB163722 /* String+Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971CCE30342F0E60DA66F6DA4E16BBF2 /* String+Security.swift */; };
+		418AA4FB23AE8D88C64771933E90A6D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A746C1E7750D5E1866549D741D7B585 /* UIKit.framework */; };
+		4566E79A950782B89185EB22F9CF173D /* QHorizontalTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ED300EFA3A413C495784B3F9F5A2964 /* QHorizontalTableView.framework */; };
+		4643C788BF0F8CD424E73BBD20B1B4E7 /* String+Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13BDDD193B151C83721769068555820 /* String+Verification.swift */; };
+		49271D15233730BE39EE9A7AD5B8948F /* UIImageView+OSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60899DECCBA3A2E5F1F8BCCA700117 /* UIImageView+OSS.swift */; };
+		4EC840576C274CB09F46B5AB3FFC485A /* QSExtensionSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 11D62F412414841E7EFE2796CAB3DAE9 /* QSExtensionSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		565172A5DE643C315B6478D8C72C85C3 /* UIImage+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF8819A4DCCB44E39141E209CD27479 /* UIImage+Cache.swift */; };
+		56BA6311FC7FA5CDA46F1E8C1D71565D /* SwiftHashing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5F80D1F2748171616B70023A438D49 /* SwiftHashing.framework */; };
+		5B2F55F9BCE9F6C8ECE9DF697B2F184F /* NSNumber+ Converte.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19FC7B32AA58EB7AABD606C953D886A /* NSNumber+ Converte.swift */; };
+		62CCA75B634A897BE067D67A2C133934 /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9351BD5B3BB0E82E5EF09E891CAD790 /* UIImage+Color.swift */; };
+		639CEB916C90CA0F45C668A3F32F9F6C /* UITextField+Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8E34641A8ED42792A709B72DDAD7AE /* UITextField+Text.swift */; };
+		64228024652B7B8CDE4E20817AE25905 /* Pods-qtabs-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4511594A8A70A9F87A69B043790768 /* Pods-qtabs-dummy.m */; };
+		6899360F47456B91D5D5B5E462831D63 /* UIView+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A294AA2BD8E216D93B5CAFDF408A42C7 /* UIView+Frame.swift */; };
+		6A0EC91F3486F792A027A12E4A303869 /* String+Substring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31CABF72B1D8CD5B94C5AFC307B1487A /* String+Substring.swift */; };
+		70B0C710C7362EE510586EEE654F5BFF /* UIViewController+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA11CCB93145CC747D3F0C21C4699D2 /* UIViewController+Toast.swift */; };
+		783552C7211B5143644807D3BE375E6A /* NSNumber+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F6D98A8ABC4D68E70923E1D3AF7577 /* NSNumber+Random.swift */; };
+		79ABD6FDC710D2D0954F2F1CE0A6AC4F /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30028F3F6D18FBF0611DEDD02114BF47 /* UIImage+Resize.swift */; };
+		7F421EE83299FFD0FE63E683EDE3C40F /* CALayer+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F836FA3EE979592C19CDF1FD49D4C61 /* CALayer+Frame.swift */; };
+		80958AA599359BF4F983DB0AD113B8AC /* QHorizontalTableView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D0B827AFB8A31AC307C92FA6F019CA /* QHorizontalTableView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		838D4F5312DC2B36F6889AEE4C362C47 /* String+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2140D078B141FE5F43F330745E3D34 /* String+Size.swift */; };
+		8AC671EC8F2785A2BA5E212B53FC4045 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A746C1E7750D5E1866549D741D7B585 /* UIKit.framework */; };
+		8D7C46D9CD86C8687FB0195ED7DB82CC /* NSArray+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49A5E9CAEFC3A14C9FDDA38D14DF821 /* NSArray+String.swift */; };
+		90864E9914C2E670F0F37E4BFD2FA126 /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09D4BBB344C96A57B4409E0AD85A924 /* UIViewController+Navigation.swift */; };
+		94517D1DC4A460D3495F4FA02328388C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A746C1E7750D5E1866549D741D7B585 /* UIKit.framework */; };
+		9D3B8E27061D908EACC3B77160984351 /* QSExtensionSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C05EC556EA3B29D23B2B1D54841C27BC /* QSExtensionSwift-dummy.m */; };
+		A1287E592CB4E3B9A69C7261D497CF2C /* QTabView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 19A1CB0F7A2903CFF13E3771B95F046D /* QTabView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A25801AE96A9FE6FC91B47C08516CBE3 /* QTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9001322C8D1889B1D7810F884D494A78 /* QTabView.swift */; };
+		A3D5F8359118C7067FDAE8DDBF9C1CAC /* QHorizontalTableView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C54C21D102D306DE5E3AD33FDC7E161E /* QHorizontalTableView-dummy.m */; };
+		A722D9AEEE20899F104710FBB0139ECA /* UIView+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55711C41FE96CF7B4CDE91A0B7BF42D /* UIView+Toast.swift */; };
+		AAC1CD35FC3D082C2E87FC431071F0A1 /* SwiftHashing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5F80D1F2748171616B70023A438D49 /* SwiftHashing.framework */; };
+		AB137BE1C702532A8D9FC1B0ABAEFC33 /* UIColor+ST.swift in Sources */ = {isa = PBXBuildFile; fileRef = B674ABF481C13100D3EE070A52C2F5E5 /* UIColor+ST.swift */; };
+		AC3290750D2C7175A5E6B7A929E2F26D /* NSDictionary+Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9375809AAAF8762C75BFD7D1602D555D /* NSDictionary+Json.swift */; };
+		AE02B9C8A0345542FE3D9AF97D1A2139 /* UILabel+Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = E863C6039D5311A842B0C26A71390AEA /* UILabel+Text.swift */; };
+		B009BABFC64CC8DAE18D0CB94896911D /* UISearchBar+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2B1169345C48C2EC27D89CBE981056 /* UISearchBar+Style.swift */; };
+		B47062A5090207D401560C5F7AB5721E /* UITabBarController+TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB37198AE04D7502F9A50ED2FB6C4415 /* UITabBarController+TabBar.swift */; };
+		B825D53D5D872913A9F5B6D9C5AD357E /* UIView+Constaint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C60792A2CACA1E314E45BC4453A7F4 /* UIView+Constaint.swift */; };
+		BA16F5B73E910679631F2F6187AEF1B1 /* Date+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CA08CAD41B4435CBB180F8E5382C41 /* Date+Components.swift */; };
+		CE5D99A49D2C249773923A740F809543 /* QSExtensionSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F1EF0367EAC31D4D47996DFEFBBBBB /* QSExtensionSwift.framework */; };
+		CFD648F0B1A82FA2A142639ED914E05E /* CALayer+Sublayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65A70E7A88FC08C9628C107B57D30F8 /* CALayer+Sublayer.swift */; };
+		D008E0CAD2D5847AAE4F11652CA88765 /* UIView+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B105A44123890638E929F2DE016C4E4C /* UIView+Appearance.swift */; };
+		D9C8D6B5D80FEA5B35EB2AF738BBE97A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B5792E12E516554FA817D96949C821 /* Foundation.framework */; };
+		DCD2A43931C81FC9792662A5AF46D1B0 /* UITableViewCell+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E1A3BACA24912950E68400E3D4FBF1 /* UITableViewCell+Style.swift */; };
+		F0A1FCE40900B95C180C2EF800A08E8E /* QHorizontalTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C7537E97B76795BF0330BFB55B8418 /* QHorizontalTableView.swift */; };
+		FA7A09B8B893163A79AE9D0944611CF3 /* SwiftHashing.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A0B1D5D0C7597614F216FF398FD1DFF /* SwiftHashing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		23D7518D411E42281C0581DAA53F922C /* PBXContainerItemProxy */ = {
+		468B2DE99F3CB34B4D377758D196142D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2BE6AFCB312B9A08085A653529ADA146;
-			remoteInfo = QHorizontalTableView;
-		};
-		819DD8F5F63B25670B8DBB686B2F7CEF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4B5B6BBE92F4C04EA3A1709D0A2029FB;
-			remoteInfo = SwiftHashing;
-		};
-		8BCF068C4D46AB6BA10A206EBB369B6E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5786D67F9C8F96D810435B3C9E074EA9;
+			remoteGlobalIDString = D44442064AF23928B060094A770093BD;
 			remoteInfo = QSExtensionSwift;
 		};
-		F7EAB4B5E6E47958F5E64E730C204E10 /* PBXContainerItemProxy */ = {
+		66650F4BD6FBBD8B0B776C4E55783CEE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4B5B6BBE92F4C04EA3A1709D0A2029FB;
+			remoteGlobalIDString = E82F34EFD7FE3C61DF34ED36719B8D34;
 			remoteInfo = SwiftHashing;
+		};
+		8612C68A3C3154BE4057A1A1D354C13B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2B2487602FBBB443529F53EC2D9E2F4;
+			remoteInfo = QHorizontalTableView;
+		};
+		A84D2F7EC2F2201C9EF38BB82223E8F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2B2487602FBBB443529F53EC2D9E2F4;
+			remoteInfo = QHorizontalTableView;
+		};
+		BAF5FA4EB066327B9FCE01811C94B69E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E82F34EFD7FE3C61DF34ED36719B8D34;
+			remoteInfo = SwiftHashing;
+		};
+		D4AAC11FC44227934425145D5D500BC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E82F34EFD7FE3C61DF34ED36719B8D34;
+			remoteInfo = SwiftHashing;
+		};
+		EFE81704B4E2AD68ECC0225AC248377C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA411B0A5AD85AF70D49C37F05BFE40C;
+			remoteInfo = QTabView;
+		};
+		F2946B9E8D73F1ED7490F7BC50FCA7F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D44442064AF23928B060094A770093BD;
+			remoteInfo = QSExtensionSwift;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0658707068A205C54FCABE62EC5CACEB /* Pods-qtabs.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-qtabs.modulemap"; sourceTree = "<group>"; };
-		07DD056AC5A7C55BDF00BBAE50D98A94 /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Navigation.swift"; path = "classes/UIViewController+Navigation.swift"; sourceTree = "<group>"; };
 		07F035D3A2FCE1911473544D16265E15 /* Pods-qtabs-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-qtabs-umbrella.h"; sourceTree = "<group>"; };
 		0A4511594A8A70A9F87A69B043790768 /* Pods-qtabs-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-qtabs-dummy.m"; sourceTree = "<group>"; };
-		0CD2E95C31C119CFD346323E59F3DD94 /* QHorizontalTableView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QHorizontalTableView-dummy.m"; sourceTree = "<group>"; };
-		113E08DB6F06E018D294B1DEB6EF9485 /* UIView+Frame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Frame.swift"; path = "classes/UIView+Frame.swift"; sourceTree = "<group>"; };
+		0CCE2EBD3413B84169CBE5953417CA20 /* SwiftHashing.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftHashing.xcconfig; sourceTree = "<group>"; };
+		0FF55CE27C0FFD6A22E7D81B8AB1668C /* SwiftHashing-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftHashing-umbrella.h"; sourceTree = "<group>"; };
+		11D62F412414841E7EFE2796CAB3DAE9 /* QSExtensionSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QSExtensionSwift-umbrella.h"; sourceTree = "<group>"; };
 		1462B6476CDC031CD1DAEB60E32CFC81 /* Pods-qtabs-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-qtabs-resources.sh"; sourceTree = "<group>"; };
 		16E29B641C599F246A46A5310277365D /* Pods-qtabs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-qtabs.debug.xcconfig"; sourceTree = "<group>"; };
-		1BDB7B9E517BD1BAC1F8348D46DB0138 /* NSDictionary+Json.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSDictionary+Json.swift"; path = "classes/NSDictionary+Json.swift"; sourceTree = "<group>"; };
-		1C6179362E73CAED50ED72656F54A521 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1E335FB074AFB21C60B19A593613D56D /* UISearchBar+Style.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISearchBar+Style.swift"; path = "classes/UISearchBar+Style.swift"; sourceTree = "<group>"; };
-		1F3DBB793716621B2459CC7A912F3526 /* UILabel+Text.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILabel+Text.swift"; path = "classes/UILabel+Text.swift"; sourceTree = "<group>"; };
-		2130B61C536C837DE48F50BD7E5240AC /* String+Verification.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Verification.swift"; path = "classes/String+Verification.swift"; sourceTree = "<group>"; };
-		22C6D99B88282C581A7B8B7F62E55DA9 /* NSObject+Class.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSObject+Class.swift"; path = "classes/NSObject+Class.swift"; sourceTree = "<group>"; };
-		2A26E6706FC1D5E7CC9D2C3B31B314A4 /* SwiftHashing.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftHashing.xcconfig; sourceTree = "<group>"; };
-		2CE928C3627F3D54575F68349BD38D73 /* String+Substring.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Substring.swift"; path = "classes/String+Substring.swift"; sourceTree = "<group>"; };
-		2DE7E5B3F71194B2C6F74396275EE813 /* UIView+Tap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Tap.swift"; path = "classes/UIView+Tap.swift"; sourceTree = "<group>"; };
-		313B7B63947CC4E791DA09EE583270D1 /* String+Security.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Security.swift"; path = "classes/String+Security.swift"; sourceTree = "<group>"; };
-		3685A8CB1DE78B8F19F57BF7BB1E6C80 /* SwiftHashing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftHashing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		37C00D24CF5694B81EB4DB1730C8C97D /* Pods_qtabs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_qtabs.framework; path = "Pods-qtabs.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A8AB892BCE4598113879C6B084E7506 /* String+Json.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Json.swift"; path = "classes/String+Json.swift"; sourceTree = "<group>"; };
-		458438B469717D3E21F05FF190A6140E /* UINavigationController+Navigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UINavigationController+Navigation.swift"; path = "classes/UINavigationController+Navigation.swift"; sourceTree = "<group>"; };
-		47F11F9488AB7211203A481AAF81D2A6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19A1CB0F7A2903CFF13E3771B95F046D /* QTabView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QTabView-umbrella.h"; sourceTree = "<group>"; };
+		1D29BA903CC2CAE137DAAB85A195A253 /* UILabel+Style.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILabel+Style.swift"; path = "classes/UILabel+Style.swift"; sourceTree = "<group>"; };
+		1ED300EFA3A413C495784B3F9F5A2964 /* QHorizontalTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QHorizontalTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F2D0727BBD5493AAF4ABB6DC4B40A5B /* QTabView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = QTabView.framework; path = QTabView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23CA08CAD41B4435CBB180F8E5382C41 /* Date+Components.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Components.swift"; path = "classes/Date+Components.swift"; sourceTree = "<group>"; };
+		2AF84A423649B54C45A6FC9CDB9332B5 /* SwiftHashing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SwiftHashing.m; sourceTree = "<group>"; };
+		2E60899DECCBA3A2E5F1F8BCCA700117 /* UIImageView+OSS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+OSS.swift"; path = "classes/UIImageView+OSS.swift"; sourceTree = "<group>"; };
+		30028F3F6D18FBF0611DEDD02114BF47 /* UIImage+Resize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Resize.swift"; path = "classes/UIImage+Resize.swift"; sourceTree = "<group>"; };
+		31CABF72B1D8CD5B94C5AFC307B1487A /* String+Substring.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Substring.swift"; path = "classes/String+Substring.swift"; sourceTree = "<group>"; };
+		34ACD2D205B53C448555A411CD89520E /* UITextView+Text.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextView+Text.swift"; path = "classes/UITextView+Text.swift"; sourceTree = "<group>"; };
+		35FB95D83D6E5B0BC42E494734AF08E5 /* UIView+Subview.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Subview.swift"; path = "classes/UIView+Subview.swift"; sourceTree = "<group>"; };
+		376CE37FE502F0FC376E139C2E7438A4 /* String+Json.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Json.swift"; path = "classes/String+Json.swift"; sourceTree = "<group>"; };
+		37F1EF0367EAC31D4D47996DFEFBBBBB /* QSExtensionSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QSExtensionSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38DDD16262728F8DB4B7463A4C3C1A6F /* QTabView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QTabView-dummy.m"; sourceTree = "<group>"; };
+		39059D039AAE26C9F94EBFB4D0262D62 /* QTabView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = QTabView.modulemap; sourceTree = "<group>"; };
 		4AFAFC82D28839B73751CDE87692151D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4CE878389A15ADC1FB19E73D62CF1400 /* UITabBarController+TabBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITabBarController+TabBar.swift"; path = "classes/UITabBarController+TabBar.swift"; sourceTree = "<group>"; };
-		4D7025024606901A5F1AFE23495B1B35 /* UIImage+RoundCorner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+RoundCorner.swift"; path = "classes/UIImage+RoundCorner.swift"; sourceTree = "<group>"; };
-		4E1DED8D4C8233F9C1136F23454CCAC0 /* UIImage+Cache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Cache.swift"; path = "classes/UIImage+Cache.swift"; sourceTree = "<group>"; };
 		51F163CD435B7775E01033605C5ADD92 /* Pods-qtabs-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-qtabs-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5222C82B2626317DDAA4AF14813B0DFB /* Pods-qtabs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-qtabs.release.xcconfig"; sourceTree = "<group>"; };
-		5404582BC25B3CE53036125F2ED2EB21 /* UIImageView+OSS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+OSS.swift"; path = "classes/UIImageView+OSS.swift"; sourceTree = "<group>"; };
-		55C86494FD63B0436D2D982485292418 /* UIImage+Color.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Color.swift"; path = "classes/UIImage+Color.swift"; sourceTree = "<group>"; };
-		5DA3C0FDDFFD36BAB07815FBC2177D60 /* UIView+Appearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Appearance.swift"; path = "classes/UIView+Appearance.swift"; sourceTree = "<group>"; };
-		5EA56B5B7A7756A60C60B0C3EEE8DF4C /* Date+Components.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Components.swift"; path = "classes/Date+Components.swift"; sourceTree = "<group>"; };
-		6543D5DD0FD5ABE96528265F93C17C8B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6681751675055BFEFDEA011C277D063F /* UILabel+Size.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILabel+Size.swift"; path = "classes/UILabel+Size.swift"; sourceTree = "<group>"; };
-		6720026101807C02BC7D0F9E709A9AE1 /* QSExtensionSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QSExtensionSwift.xcconfig; sourceTree = "<group>"; };
-		76082A16A9ACCA35ACCE700E6CF3CBB6 /* SwiftHashing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftHashing.framework; path = SwiftHashing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		776E793AE754B0E1B30510DC0AF58772 /* UIView+Toast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Toast.swift"; path = "classes/UIView+Toast.swift"; sourceTree = "<group>"; };
-		78AC54F2B6F469BC8DE6873D414E5AD2 /* String+Size.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Size.swift"; path = "classes/String+Size.swift"; sourceTree = "<group>"; };
-		85093B71ED76F2D82A5C4ECA2F1FDAF1 /* QHorizontalTableView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QHorizontalTableView.xcconfig; sourceTree = "<group>"; };
-		8FFDE942969979659D55F53C6C6E36DA /* UIView+Subview.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Subview.swift"; path = "classes/UIView+Subview.swift"; sourceTree = "<group>"; };
-		9023370053643D0F20583CB57041E6D2 /* SwiftHashing-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftHashing-umbrella.h"; sourceTree = "<group>"; };
-		92308854FFF8E0F47CD26E64F343B65D /* UIImage+Resize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Resize.swift"; path = "classes/UIImage+Resize.swift"; sourceTree = "<group>"; };
-		9360737D8667C548628CDC583F272AB8 /* UILabel+Style.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILabel+Style.swift"; path = "classes/UILabel+Style.swift"; sourceTree = "<group>"; };
+		53BE26AF4791F5C43AEFD543C1A25D86 /* QHorizontalTableView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QHorizontalTableView-prefix.pch"; sourceTree = "<group>"; };
+		555224B67ED53E165A7D6EA5A7F6D103 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		588F658A42583B766741D7D5C2C5F15F /* SwiftHashing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftHashing.framework; path = SwiftHashing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C2B1169345C48C2EC27D89CBE981056 /* UISearchBar+Style.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISearchBar+Style.swift"; path = "classes/UISearchBar+Style.swift"; sourceTree = "<group>"; };
+		68C7537E97B76795BF0330BFB55B8418 /* QHorizontalTableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QHorizontalTableView.swift; path = Classes/QHorizontalTableView.swift; sourceTree = "<group>"; };
+		71B609FE4B5712F5933D497034DE306A /* QSExtensionSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = QSExtensionSwift.framework; path = QSExtensionSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		725C8326A5FA7494B4D9E59A018E9029 /* UILabel+Size.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILabel+Size.swift"; path = "classes/UILabel+Size.swift"; sourceTree = "<group>"; };
+		76E1A3BACA24912950E68400E3D4FBF1 /* UITableViewCell+Style.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableViewCell+Style.swift"; path = "classes/UITableViewCell+Style.swift"; sourceTree = "<group>"; };
+		7E5D22F55400D65C324524E1B21E1882 /* QSExtensionSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = QSExtensionSwift.modulemap; sourceTree = "<group>"; };
+		818B99F62C57F9473F649B6E6A674793 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89EF50D2176D5D3E8B2F6386DFBFD779 /* NSData+String.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSData+String.swift"; path = "classes/NSData+String.swift"; sourceTree = "<group>"; };
+		8A0B1D5D0C7597614F216FF398FD1DFF /* SwiftHashing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SwiftHashing.h; sourceTree = "<group>"; };
+		8A746C1E7750D5E1866549D741D7B585 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		8CA64C0ADD41E81AAD13E46D986359C1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F836FA3EE979592C19CDF1FD49D4C61 /* CALayer+Frame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CALayer+Frame.swift"; path = "classes/CALayer+Frame.swift"; sourceTree = "<group>"; };
+		9001322C8D1889B1D7810F884D494A78 /* QTabView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QTabView.swift; path = Classes/QTabView.swift; sourceTree = "<group>"; };
+		9375809AAAF8762C75BFD7D1602D555D /* NSDictionary+Json.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSDictionary+Json.swift"; path = "classes/NSDictionary+Json.swift"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		948FF9E4CA87E8BDF289EB050A9D027D /* UIView+Constaint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Constaint.swift"; path = "classes/UIView+Constaint.swift"; sourceTree = "<group>"; };
-		9DC0216ED2B413EE6825E9BCC2D43D50 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9F4130B1D6BDBBD2BC817FC246A9D51A /* NSNumber+Random.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSNumber+Random.swift"; path = "classes/NSNumber+Random.swift"; sourceTree = "<group>"; };
+		971CCE30342F0E60DA66F6DA4E16BBF2 /* String+Security.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Security.swift"; path = "classes/String+Security.swift"; sourceTree = "<group>"; };
+		9CA11CCB93145CC747D3F0C21C4699D2 /* UIViewController+Toast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Toast.swift"; path = "classes/UIViewController+Toast.swift"; sourceTree = "<group>"; };
+		9D9DFB44A8104581327AC3127031CA88 /* NSObject+Class.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSObject+Class.swift"; path = "classes/NSObject+Class.swift"; sourceTree = "<group>"; };
+		9E8E34641A8ED42792A709B72DDAD7AE /* UITextField+Text.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+Text.swift"; path = "classes/UITextField+Text.swift"; sourceTree = "<group>"; };
 		9FADE9DA865486C24BFB73363EBC5E98 /* Pods-qtabs-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-qtabs-acknowledgements.plist"; sourceTree = "<group>"; };
-		A198255122EE0B4A57F2950D854D4759 /* CALayer+Frame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CALayer+Frame.swift"; path = "classes/CALayer+Frame.swift"; sourceTree = "<group>"; };
-		A60CCC63B0553E74F73B40DF20479245 /* SwiftHashing-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftHashing-dummy.m"; sourceTree = "<group>"; };
-		AA2D6B4A20FBCD25F0ED36379EF3D91D /* QSExtensionSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QSExtensionSwift-umbrella.h"; sourceTree = "<group>"; };
-		AA366CCC2933B721D26D550834130340 /* NSData+String.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSData+String.swift"; path = "classes/NSData+String.swift"; sourceTree = "<group>"; };
-		AEF6F804F5D24F650D0D6C9B8D60037E /* SwiftHashing.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftHashing.modulemap; sourceTree = "<group>"; };
-		BC83FBA342EAD2033B9C4ADC2EEA29D0 /* UIColor+ST.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+ST.swift"; path = "classes/UIColor+ST.swift"; sourceTree = "<group>"; };
-		C1B710F2BC42CCAC135530BF0DD70A0A /* SwiftHashing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SwiftHashing.h; sourceTree = "<group>"; };
-		CB3708BCEABA75FA80B92971AC0F04C3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		D9F206E89911D531FA9AF6D9F81D8A32 /* SwiftHashing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SwiftHashing.m; sourceTree = "<group>"; };
-		DC7664F9B393F9A8AF87DA518EE9C6D6 /* QHorizontalTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = QHorizontalTableView.framework; path = QHorizontalTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DDEE0BF50937A7CE8C35763651616FBD /* NSArray+String.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSArray+String.swift"; path = "classes/NSArray+String.swift"; sourceTree = "<group>"; };
-		DE5C9EF61FB9743A3F80A190942DF4AD /* QHorizontalTableView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = QHorizontalTableView.modulemap; sourceTree = "<group>"; };
+		A294AA2BD8E216D93B5CAFDF408A42C7 /* UIView+Frame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Frame.swift"; path = "classes/UIView+Frame.swift"; sourceTree = "<group>"; };
+		A2AC8F450EFBE6BA6B864C6E28BCC334 /* QHorizontalTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = QHorizontalTableView.framework; path = QHorizontalTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A43EB3E8649C40A08673431F1F4B3FC1 /* SwiftHashing-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftHashing-prefix.pch"; sourceTree = "<group>"; };
+		A4C666DE003BA61B18092FF648E9B16B /* Pods_qtabs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_qtabs.framework; path = "Pods-qtabs.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6C60792A2CACA1E314E45BC4453A7F4 /* UIView+Constaint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Constaint.swift"; path = "classes/UIView+Constaint.swift"; sourceTree = "<group>"; };
+		A9351BD5B3BB0E82E5EF09E891CAD790 /* UIImage+Color.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Color.swift"; path = "classes/UIImage+Color.swift"; sourceTree = "<group>"; };
+		AA805A89AF726FAD93DA1BCC0547D21A /* QTabView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QTabView-prefix.pch"; sourceTree = "<group>"; };
+		AC5F80D1F2748171616B70023A438D49 /* SwiftHashing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftHashing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF2485BE48E18A446A65DAA07694EFF1 /* SwiftHashing-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftHashing-dummy.m"; sourceTree = "<group>"; };
+		B105A44123890638E929F2DE016C4E4C /* UIView+Appearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Appearance.swift"; path = "classes/UIView+Appearance.swift"; sourceTree = "<group>"; };
+		B4F6D98A8ABC4D68E70923E1D3AF7577 /* NSNumber+Random.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSNumber+Random.swift"; path = "classes/NSNumber+Random.swift"; sourceTree = "<group>"; };
+		B5D0B827AFB8A31AC307C92FA6F019CA /* QHorizontalTableView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QHorizontalTableView-umbrella.h"; sourceTree = "<group>"; };
+		B65A70E7A88FC08C9628C107B57D30F8 /* CALayer+Sublayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CALayer+Sublayer.swift"; path = "classes/CALayer+Sublayer.swift"; sourceTree = "<group>"; };
+		B674ABF481C13100D3EE070A52C2F5E5 /* UIColor+ST.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+ST.swift"; path = "classes/UIColor+ST.swift"; sourceTree = "<group>"; };
+		BAE9ABF0933A33E348140FF13D5E3698 /* QHorizontalTableView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = QHorizontalTableView.modulemap; sourceTree = "<group>"; };
+		BC2140D078B141FE5F43F330745E3D34 /* String+Size.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Size.swift"; path = "classes/String+Size.swift"; sourceTree = "<group>"; };
+		C05EC556EA3B29D23B2B1D54841C27BC /* QSExtensionSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QSExtensionSwift-dummy.m"; sourceTree = "<group>"; };
+		C09D4BBB344C96A57B4409E0AD85A924 /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Navigation.swift"; path = "classes/UIViewController+Navigation.swift"; sourceTree = "<group>"; };
+		C382562940D7FE4FDD149C13AF96048C /* QHorizontalTableView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QHorizontalTableView.xcconfig; sourceTree = "<group>"; };
+		C54C21D102D306DE5E3AD33FDC7E161E /* QHorizontalTableView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QHorizontalTableView-dummy.m"; sourceTree = "<group>"; };
+		C55711C41FE96CF7B4CDE91A0B7BF42D /* UIView+Toast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Toast.swift"; path = "classes/UIView+Toast.swift"; sourceTree = "<group>"; };
+		CE04AB480090A913F8FAC876907418A9 /* UIImage+RoundCorner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+RoundCorner.swift"; path = "classes/UIImage+RoundCorner.swift"; sourceTree = "<group>"; };
+		CF709C61F2305F3479F12E2016FBE8C5 /* QSExtensionSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QSExtensionSwift.xcconfig; sourceTree = "<group>"; };
+		D0B5792E12E516554FA817D96949C821 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D13BDDD193B151C83721769068555820 /* String+Verification.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Verification.swift"; path = "classes/String+Verification.swift"; sourceTree = "<group>"; };
+		D19FC7B32AA58EB7AABD606C953D886A /* NSNumber+ Converte.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSNumber+ Converte.swift"; path = "classes/NSNumber+ Converte.swift"; sourceTree = "<group>"; };
+		DFAC16B89482C97AD7205FB7D78DE5E2 /* UIView+Tap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Tap.swift"; path = "classes/UIView+Tap.swift"; sourceTree = "<group>"; };
 		E00FF32827CAE3D7E8B39EEA05A14211 /* Pods-qtabs-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-qtabs-frameworks.sh"; sourceTree = "<group>"; };
-		E085B77B2D5D3ED52039DBA6DF65E6EB /* NSNumber+ Converte.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSNumber+ Converte.swift"; path = "classes/NSNumber+ Converte.swift"; sourceTree = "<group>"; };
-		E281230B8FEF1C042B52E78157EEBE06 /* QSExtensionSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = QSExtensionSwift.framework; path = QSExtensionSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E3118DE76E34EBAB6153FE43BBB8513A /* SwiftHashing-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftHashing-prefix.pch"; sourceTree = "<group>"; };
-		E7C9DC6AE5CA134571C7759A858453D6 /* CALayer+Sublayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CALayer+Sublayer.swift"; path = "classes/CALayer+Sublayer.swift"; sourceTree = "<group>"; };
-		E8F8FB40D352A8BD3BDD51AE0BF97B69 /* QSExtensionSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = QSExtensionSwift.modulemap; sourceTree = "<group>"; };
-		EA8A2C4701802249A15DAF1B9D3FC770 /* QSExtensionSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QSExtensionSwift-prefix.pch"; sourceTree = "<group>"; };
-		EAA49BB3CA4628E60D01434C8EE0324B /* QHorizontalTableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QHorizontalTableView.swift; path = Classes/QHorizontalTableView.swift; sourceTree = "<group>"; };
-		EE1A89114A5CC3BCD60657D90543BC62 /* UITextView+Text.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextView+Text.swift"; path = "classes/UITextView+Text.swift"; sourceTree = "<group>"; };
-		F4C4F10545374DD708FE6FE6B6FD5417 /* UITableViewCell+Style.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableViewCell+Style.swift"; path = "classes/UITableViewCell+Style.swift"; sourceTree = "<group>"; };
-		F50F18AF4EB263EE9F056CF8EECE0E97 /* QHorizontalTableView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QHorizontalTableView-prefix.pch"; sourceTree = "<group>"; };
-		F868DFBCB61595D732B0E7404720B226 /* QHorizontalTableView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QHorizontalTableView-umbrella.h"; sourceTree = "<group>"; };
-		F87B7B842F2788DB0CC75BD95B3D0B86 /* QSExtensionSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QSExtensionSwift-dummy.m"; sourceTree = "<group>"; };
-		FB412E84C8096FD279F2B8D20457AB01 /* UIViewController+Toast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Toast.swift"; path = "classes/UIViewController+Toast.swift"; sourceTree = "<group>"; };
-		FF0FA95A6B274957ED92900EF740F07C /* UITextField+Text.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+Text.swift"; path = "classes/UITextField+Text.swift"; sourceTree = "<group>"; };
+		E316DF5B2073FA97961DEFCEC8BA85DD /* SwiftHashing.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftHashing.modulemap; sourceTree = "<group>"; };
+		E3471045302F971CEE79AE7110BFC2DC /* QSExtensionSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QSExtensionSwift-prefix.pch"; sourceTree = "<group>"; };
+		E863C6039D5311A842B0C26A71390AEA /* UILabel+Text.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILabel+Text.swift"; path = "classes/UILabel+Text.swift"; sourceTree = "<group>"; };
+		EB37198AE04D7502F9A50ED2FB6C4415 /* UITabBarController+TabBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITabBarController+TabBar.swift"; path = "classes/UITabBarController+TabBar.swift"; sourceTree = "<group>"; };
+		EEF8819A4DCCB44E39141E209CD27479 /* UIImage+Cache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Cache.swift"; path = "classes/UIImage+Cache.swift"; sourceTree = "<group>"; };
+		F49A5E9CAEFC3A14C9FDDA38D14DF821 /* NSArray+String.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSArray+String.swift"; path = "classes/NSArray+String.swift"; sourceTree = "<group>"; };
+		F4EEB9BA5A1D2ACD6834C339A23BB054 /* UINavigationController+Navigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UINavigationController+Navigation.swift"; path = "classes/UINavigationController+Navigation.swift"; sourceTree = "<group>"; };
+		F6E23FD90E77A5B1B2C038CCE92F1416 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8DE5DC2D843695FF8576114B5C0E2C9 /* QTabView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QTabView.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0EEA5D661FDE96F64D5197C13B45A879 /* Frameworks */ = {
+		3B51A11732F85B3A8883F98B8209F067 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F44608DE673BDE6405FD46E7015C8BE8 /* Foundation.framework in Frameworks */,
-				3602100E20101F8A0778429E86AB0DC2 /* SwiftHashing.framework in Frameworks */,
-				FEEC531E8E7F48B53597FDEFB0F7AC43 /* UIKit.framework in Frameworks */,
+				11F7B5AF3D4504F60E8209419DE54D8A /* Foundation.framework in Frameworks */,
+				4566E79A950782B89185EB22F9CF173D /* QHorizontalTableView.framework in Frameworks */,
+				CE5D99A49D2C249773923A740F809543 /* QSExtensionSwift.framework in Frameworks */,
+				AAC1CD35FC3D082C2E87FC431071F0A1 /* SwiftHashing.framework in Frameworks */,
+				8AC671EC8F2785A2BA5E212B53FC4045 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		76CC10F30DBD434C19271DF8AC79675C /* Frameworks */ = {
+		445EC4C5798B2BA75429D72B9CD1E182 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91998EEA5C96BA1E803BDC30F1E82897 /* Foundation.framework in Frameworks */,
+				36EC2D10A4927AA2F5B1AA0849AA96A9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		91B225B19120B1CC2E6C908F695F7788 /* Frameworks */ = {
+		719882B3CDBE6CA327F50BCD8B137D1C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAE2923D684817F01F93FD0D0BE482C8 /* Foundation.framework in Frameworks */,
-				1CAFBFB869917473B745CEAEFB0B0A80 /* UIKit.framework in Frameworks */,
+				12A4C5DF50D3C01C78DD75A82B2BAC39 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF342CE1FB914D2D1A1758475C364C23 /* Frameworks */ = {
+		800DA21F63E8C8398CA41915120EDBF2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8849B8C4ED61765E7E378158EA2420C /* Foundation.framework in Frameworks */,
+				0B739701E25B6A16F8931143B936A0B2 /* Foundation.framework in Frameworks */,
+				94517D1DC4A460D3495F4FA02328388C /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94AD95278BD11AB6B327B89EE923BDC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9C8D6B5D80FEA5B35EB2AF738BBE97A /* Foundation.framework in Frameworks */,
+				56BA6311FC7FA5CDA46F1E8C1D71565D /* SwiftHashing.framework in Frameworks */,
+				418AA4FB23AE8D88C64771933E90A6D1 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04BF522DB20D497094CFDA843C9C5DAD /* Frameworks */ = {
+		1046D8CDE0D3F48CCC500962846C74AF /* QTabView */ = {
 			isa = PBXGroup;
 			children = (
-				3685A8CB1DE78B8F19F57BF7BB1E6C80 /* SwiftHashing.framework */,
-				4B03C6E67A4DA4AFEAA3217D1393B9EF /* iOS */,
+				9001322C8D1889B1D7810F884D494A78 /* QTabView.swift */,
+				F74C176C900327CA9337B84187076FE8 /* Support Files */,
 			);
-			name = Frameworks;
+			name = QTabView;
+			path = QTabView;
 			sourceTree = "<group>";
 		};
-		0949216BA9D56304D037CE88E5061D43 /* Support Files */ = {
+		19489270AC22DDB4960DA7E986140D1D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				1C6179362E73CAED50ED72656F54A521 /* Info.plist */,
-				AEF6F804F5D24F650D0D6C9B8D60037E /* SwiftHashing.modulemap */,
-				2A26E6706FC1D5E7CC9D2C3B31B314A4 /* SwiftHashing.xcconfig */,
-				A60CCC63B0553E74F73B40DF20479245 /* SwiftHashing-dummy.m */,
-				E3118DE76E34EBAB6153FE43BBB8513A /* SwiftHashing-prefix.pch */,
-				9023370053643D0F20583CB57041E6D2 /* SwiftHashing-umbrella.h */,
+				818B99F62C57F9473F649B6E6A674793 /* Info.plist */,
+				BAE9ABF0933A33E348140FF13D5E3698 /* QHorizontalTableView.modulemap */,
+				C382562940D7FE4FDD149C13AF96048C /* QHorizontalTableView.xcconfig */,
+				C54C21D102D306DE5E3AD33FDC7E161E /* QHorizontalTableView-dummy.m */,
+				53BE26AF4791F5C43AEFD543C1A25D86 /* QHorizontalTableView-prefix.pch */,
+				B5D0B827AFB8A31AC307C92FA6F019CA /* QHorizontalTableView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/QHorizontalTableView";
+			sourceTree = "<group>";
+		};
+		1BEB12E68B2328254CB0250E185CECA5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8CA64C0ADD41E81AAD13E46D986359C1 /* Info.plist */,
+				E316DF5B2073FA97961DEFCEC8BA85DD /* SwiftHashing.modulemap */,
+				0CCE2EBD3413B84169CBE5953417CA20 /* SwiftHashing.xcconfig */,
+				AF2485BE48E18A446A65DAA07694EFF1 /* SwiftHashing-dummy.m */,
+				A43EB3E8649C40A08673431F1F4B3FC1 /* SwiftHashing-prefix.pch */,
+				0FF55CE27C0FFD6A22E7D81B8AB1668C /* SwiftHashing-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SwiftHashing";
+			sourceTree = "<group>";
+		};
+		3AF4759F9470E31BCA901041FB9F43A6 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D0B5792E12E516554FA817D96949C821 /* Foundation.framework */,
+				8A746C1E7750D5E1866549D741D7B585 /* UIKit.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		3F46F6627F0D693FE3859890608B2F4E /* Targets Support Files */ = {
@@ -244,34 +326,72 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		495646B2A68423F4E8256E32DCEE4332 /* Products */ = {
+		616A22FE1F45BC467CEBE589271F64AD /* QSExtensionSwift */ = {
 			isa = PBXGroup;
 			children = (
-				37C00D24CF5694B81EB4DB1730C8C97D /* Pods_qtabs.framework */,
-				DC7664F9B393F9A8AF87DA518EE9C6D6 /* QHorizontalTableView.framework */,
-				E281230B8FEF1C042B52E78157EEBE06 /* QSExtensionSwift.framework */,
-				76082A16A9ACCA35ACCE700E6CF3CBB6 /* SwiftHashing.framework */,
+				8F836FA3EE979592C19CDF1FD49D4C61 /* CALayer+Frame.swift */,
+				B65A70E7A88FC08C9628C107B57D30F8 /* CALayer+Sublayer.swift */,
+				23CA08CAD41B4435CBB180F8E5382C41 /* Date+Components.swift */,
+				F49A5E9CAEFC3A14C9FDDA38D14DF821 /* NSArray+String.swift */,
+				89EF50D2176D5D3E8B2F6386DFBFD779 /* NSData+String.swift */,
+				9375809AAAF8762C75BFD7D1602D555D /* NSDictionary+Json.swift */,
+				D19FC7B32AA58EB7AABD606C953D886A /* NSNumber+ Converte.swift */,
+				B4F6D98A8ABC4D68E70923E1D3AF7577 /* NSNumber+Random.swift */,
+				9D9DFB44A8104581327AC3127031CA88 /* NSObject+Class.swift */,
+				376CE37FE502F0FC376E139C2E7438A4 /* String+Json.swift */,
+				971CCE30342F0E60DA66F6DA4E16BBF2 /* String+Security.swift */,
+				BC2140D078B141FE5F43F330745E3D34 /* String+Size.swift */,
+				31CABF72B1D8CD5B94C5AFC307B1487A /* String+Substring.swift */,
+				D13BDDD193B151C83721769068555820 /* String+Verification.swift */,
+				B674ABF481C13100D3EE070A52C2F5E5 /* UIColor+ST.swift */,
+				EEF8819A4DCCB44E39141E209CD27479 /* UIImage+Cache.swift */,
+				A9351BD5B3BB0E82E5EF09E891CAD790 /* UIImage+Color.swift */,
+				30028F3F6D18FBF0611DEDD02114BF47 /* UIImage+Resize.swift */,
+				CE04AB480090A913F8FAC876907418A9 /* UIImage+RoundCorner.swift */,
+				2E60899DECCBA3A2E5F1F8BCCA700117 /* UIImageView+OSS.swift */,
+				725C8326A5FA7494B4D9E59A018E9029 /* UILabel+Size.swift */,
+				1D29BA903CC2CAE137DAAB85A195A253 /* UILabel+Style.swift */,
+				E863C6039D5311A842B0C26A71390AEA /* UILabel+Text.swift */,
+				F4EEB9BA5A1D2ACD6834C339A23BB054 /* UINavigationController+Navigation.swift */,
+				5C2B1169345C48C2EC27D89CBE981056 /* UISearchBar+Style.swift */,
+				EB37198AE04D7502F9A50ED2FB6C4415 /* UITabBarController+TabBar.swift */,
+				76E1A3BACA24912950E68400E3D4FBF1 /* UITableViewCell+Style.swift */,
+				9E8E34641A8ED42792A709B72DDAD7AE /* UITextField+Text.swift */,
+				34ACD2D205B53C448555A411CD89520E /* UITextView+Text.swift */,
+				B105A44123890638E929F2DE016C4E4C /* UIView+Appearance.swift */,
+				A6C60792A2CACA1E314E45BC4453A7F4 /* UIView+Constaint.swift */,
+				A294AA2BD8E216D93B5CAFDF408A42C7 /* UIView+Frame.swift */,
+				35FB95D83D6E5B0BC42E494734AF08E5 /* UIView+Subview.swift */,
+				DFAC16B89482C97AD7205FB7D78DE5E2 /* UIView+Tap.swift */,
+				C55711C41FE96CF7B4CDE91A0B7BF42D /* UIView+Toast.swift */,
+				C09D4BBB344C96A57B4409E0AD85A924 /* UIViewController+Navigation.swift */,
+				9CA11CCB93145CC747D3F0C21C4699D2 /* UIViewController+Toast.swift */,
+				9CCE65CD3409FC7FA14F9C2695A6FFE1 /* Support Files */,
 			);
-			name = Products;
+			name = QSExtensionSwift;
+			path = QSExtensionSwift;
 			sourceTree = "<group>";
 		};
-		4B03C6E67A4DA4AFEAA3217D1393B9EF /* iOS */ = {
+		6D4FB9C9F9152D79398CC8FFABE540A6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6543D5DD0FD5ABE96528265F93C17C8B /* Foundation.framework */,
-				CB3708BCEABA75FA80B92971AC0F04C3 /* UIKit.framework */,
+				1ED300EFA3A413C495784B3F9F5A2964 /* QHorizontalTableView.framework */,
+				37F1EF0367EAC31D4D47996DFEFBBBBB /* QSExtensionSwift.framework */,
+				AC5F80D1F2748171616B70023A438D49 /* SwiftHashing.framework */,
+				3AF4759F9470E31BCA901041FB9F43A6 /* iOS */,
 			);
-			name = iOS;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5C25B568020404308D4209F0732DE512 /* QHorizontalTableView */ = {
+		71FDDD14B6EB5A872A43414F839D3FE8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				EAA49BB3CA4628E60D01434C8EE0324B /* QHorizontalTableView.swift */,
-				ECBB7FA3CEF2DE1F6402B1FA1ACA74AF /* Support Files */,
+				CC355253F0071118ACD1FFF2DA205AAE /* QHorizontalTableView */,
+				616A22FE1F45BC467CEBE589271F64AD /* QSExtensionSwift */,
+				1046D8CDE0D3F48CCC500962846C74AF /* QTabView */,
+				F635590CD200B422B41112BC3078BA1E /* SwiftHashing */,
 			);
-			name = QHorizontalTableView;
-			path = QHorizontalTableView;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		7837784B5357D38675DDFF3D345D197A /* Pods-qtabs */ = {
@@ -296,154 +416,128 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				04BF522DB20D497094CFDA843C9C5DAD /* Frameworks */,
-				8698F4250684B0267664093E28043CB9 /* Pods */,
-				495646B2A68423F4E8256E32DCEE4332 /* Products */,
+				6D4FB9C9F9152D79398CC8FFABE540A6 /* Frameworks */,
+				71FDDD14B6EB5A872A43414F839D3FE8 /* Pods */,
+				C8E39F24BE92D92F4ABF83342BC3BF24 /* Products */,
 				3F46F6627F0D693FE3859890608B2F4E /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8698F4250684B0267664093E28043CB9 /* Pods */ = {
+		9CCE65CD3409FC7FA14F9C2695A6FFE1 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				5C25B568020404308D4209F0732DE512 /* QHorizontalTableView */,
-				93DEDD8C1418315BD89EC32784034E04 /* QSExtensionSwift */,
-				D0FB5AE8C60D2D8D2BAAEE0177435FB1 /* SwiftHashing */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		93DEDD8C1418315BD89EC32784034E04 /* QSExtensionSwift */ = {
-			isa = PBXGroup;
-			children = (
-				A198255122EE0B4A57F2950D854D4759 /* CALayer+Frame.swift */,
-				E7C9DC6AE5CA134571C7759A858453D6 /* CALayer+Sublayer.swift */,
-				5EA56B5B7A7756A60C60B0C3EEE8DF4C /* Date+Components.swift */,
-				DDEE0BF50937A7CE8C35763651616FBD /* NSArray+String.swift */,
-				AA366CCC2933B721D26D550834130340 /* NSData+String.swift */,
-				1BDB7B9E517BD1BAC1F8348D46DB0138 /* NSDictionary+Json.swift */,
-				E085B77B2D5D3ED52039DBA6DF65E6EB /* NSNumber+ Converte.swift */,
-				9F4130B1D6BDBBD2BC817FC246A9D51A /* NSNumber+Random.swift */,
-				22C6D99B88282C581A7B8B7F62E55DA9 /* NSObject+Class.swift */,
-				3A8AB892BCE4598113879C6B084E7506 /* String+Json.swift */,
-				313B7B63947CC4E791DA09EE583270D1 /* String+Security.swift */,
-				78AC54F2B6F469BC8DE6873D414E5AD2 /* String+Size.swift */,
-				2CE928C3627F3D54575F68349BD38D73 /* String+Substring.swift */,
-				2130B61C536C837DE48F50BD7E5240AC /* String+Verification.swift */,
-				BC83FBA342EAD2033B9C4ADC2EEA29D0 /* UIColor+ST.swift */,
-				4E1DED8D4C8233F9C1136F23454CCAC0 /* UIImage+Cache.swift */,
-				55C86494FD63B0436D2D982485292418 /* UIImage+Color.swift */,
-				92308854FFF8E0F47CD26E64F343B65D /* UIImage+Resize.swift */,
-				4D7025024606901A5F1AFE23495B1B35 /* UIImage+RoundCorner.swift */,
-				5404582BC25B3CE53036125F2ED2EB21 /* UIImageView+OSS.swift */,
-				6681751675055BFEFDEA011C277D063F /* UILabel+Size.swift */,
-				9360737D8667C548628CDC583F272AB8 /* UILabel+Style.swift */,
-				1F3DBB793716621B2459CC7A912F3526 /* UILabel+Text.swift */,
-				458438B469717D3E21F05FF190A6140E /* UINavigationController+Navigation.swift */,
-				1E335FB074AFB21C60B19A593613D56D /* UISearchBar+Style.swift */,
-				4CE878389A15ADC1FB19E73D62CF1400 /* UITabBarController+TabBar.swift */,
-				F4C4F10545374DD708FE6FE6B6FD5417 /* UITableViewCell+Style.swift */,
-				FF0FA95A6B274957ED92900EF740F07C /* UITextField+Text.swift */,
-				EE1A89114A5CC3BCD60657D90543BC62 /* UITextView+Text.swift */,
-				5DA3C0FDDFFD36BAB07815FBC2177D60 /* UIView+Appearance.swift */,
-				948FF9E4CA87E8BDF289EB050A9D027D /* UIView+Constaint.swift */,
-				113E08DB6F06E018D294B1DEB6EF9485 /* UIView+Frame.swift */,
-				8FFDE942969979659D55F53C6C6E36DA /* UIView+Subview.swift */,
-				2DE7E5B3F71194B2C6F74396275EE813 /* UIView+Tap.swift */,
-				776E793AE754B0E1B30510DC0AF58772 /* UIView+Toast.swift */,
-				07DD056AC5A7C55BDF00BBAE50D98A94 /* UIViewController+Navigation.swift */,
-				FB412E84C8096FD279F2B8D20457AB01 /* UIViewController+Toast.swift */,
-				FE340865275B5CC464F7670C3152A4ED /* Support Files */,
-			);
-			name = QSExtensionSwift;
-			path = QSExtensionSwift;
-			sourceTree = "<group>";
-		};
-		D0FB5AE8C60D2D8D2BAAEE0177435FB1 /* SwiftHashing */ = {
-			isa = PBXGroup;
-			children = (
-				C1B710F2BC42CCAC135530BF0DD70A0A /* SwiftHashing.h */,
-				D9F206E89911D531FA9AF6D9F81D8A32 /* SwiftHashing.m */,
-				0949216BA9D56304D037CE88E5061D43 /* Support Files */,
-			);
-			name = SwiftHashing;
-			path = SwiftHashing;
-			sourceTree = "<group>";
-		};
-		ECBB7FA3CEF2DE1F6402B1FA1ACA74AF /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				47F11F9488AB7211203A481AAF81D2A6 /* Info.plist */,
-				DE5C9EF61FB9743A3F80A190942DF4AD /* QHorizontalTableView.modulemap */,
-				85093B71ED76F2D82A5C4ECA2F1FDAF1 /* QHorizontalTableView.xcconfig */,
-				0CD2E95C31C119CFD346323E59F3DD94 /* QHorizontalTableView-dummy.m */,
-				F50F18AF4EB263EE9F056CF8EECE0E97 /* QHorizontalTableView-prefix.pch */,
-				F868DFBCB61595D732B0E7404720B226 /* QHorizontalTableView-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/QHorizontalTableView";
-			sourceTree = "<group>";
-		};
-		FE340865275B5CC464F7670C3152A4ED /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				9DC0216ED2B413EE6825E9BCC2D43D50 /* Info.plist */,
-				E8F8FB40D352A8BD3BDD51AE0BF97B69 /* QSExtensionSwift.modulemap */,
-				6720026101807C02BC7D0F9E709A9AE1 /* QSExtensionSwift.xcconfig */,
-				F87B7B842F2788DB0CC75BD95B3D0B86 /* QSExtensionSwift-dummy.m */,
-				EA8A2C4701802249A15DAF1B9D3FC770 /* QSExtensionSwift-prefix.pch */,
-				AA2D6B4A20FBCD25F0ED36379EF3D91D /* QSExtensionSwift-umbrella.h */,
+				F6E23FD90E77A5B1B2C038CCE92F1416 /* Info.plist */,
+				7E5D22F55400D65C324524E1B21E1882 /* QSExtensionSwift.modulemap */,
+				CF709C61F2305F3479F12E2016FBE8C5 /* QSExtensionSwift.xcconfig */,
+				C05EC556EA3B29D23B2B1D54841C27BC /* QSExtensionSwift-dummy.m */,
+				E3471045302F971CEE79AE7110BFC2DC /* QSExtensionSwift-prefix.pch */,
+				11D62F412414841E7EFE2796CAB3DAE9 /* QSExtensionSwift-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/QSExtensionSwift";
 			sourceTree = "<group>";
 		};
+		C8E39F24BE92D92F4ABF83342BC3BF24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4C666DE003BA61B18092FF648E9B16B /* Pods_qtabs.framework */,
+				A2AC8F450EFBE6BA6B864C6E28BCC334 /* QHorizontalTableView.framework */,
+				71B609FE4B5712F5933D497034DE306A /* QSExtensionSwift.framework */,
+				1F2D0727BBD5493AAF4ABB6DC4B40A5B /* QTabView.framework */,
+				588F658A42583B766741D7D5C2C5F15F /* SwiftHashing.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC355253F0071118ACD1FFF2DA205AAE /* QHorizontalTableView */ = {
+			isa = PBXGroup;
+			children = (
+				68C7537E97B76795BF0330BFB55B8418 /* QHorizontalTableView.swift */,
+				19489270AC22DDB4960DA7E986140D1D /* Support Files */,
+			);
+			name = QHorizontalTableView;
+			path = QHorizontalTableView;
+			sourceTree = "<group>";
+		};
+		F635590CD200B422B41112BC3078BA1E /* SwiftHashing */ = {
+			isa = PBXGroup;
+			children = (
+				8A0B1D5D0C7597614F216FF398FD1DFF /* SwiftHashing.h */,
+				2AF84A423649B54C45A6FC9CDB9332B5 /* SwiftHashing.m */,
+				1BEB12E68B2328254CB0250E185CECA5 /* Support Files */,
+			);
+			name = SwiftHashing;
+			path = SwiftHashing;
+			sourceTree = "<group>";
+		};
+		F74C176C900327CA9337B84187076FE8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				555224B67ED53E165A7D6EA5A7F6D103 /* Info.plist */,
+				39059D039AAE26C9F94EBFB4D0262D62 /* QTabView.modulemap */,
+				F8DE5DC2D843695FF8576114B5C0E2C9 /* QTabView.xcconfig */,
+				38DDD16262728F8DB4B7463A4C3C1A6F /* QTabView-dummy.m */,
+				AA805A89AF726FAD93DA1BCC0547D21A /* QTabView-prefix.pch */,
+				19A1CB0F7A2903CFF13E3771B95F046D /* QTabView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/QTabView";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		5FE04EB001A5F401C02538E91B6ED471 /* Headers */ = {
+		1599C247AFC890B127968BDEEB2D1B13 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B5F6D89C042207269AAC57FD6A273F7 /* SwiftHashing-umbrella.h in Headers */,
-				83CC93EF99CEC6BD9EDB01D5CF08F06F /* SwiftHashing.h in Headers */,
+				80958AA599359BF4F983DB0AD113B8AC /* QHorizontalTableView-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7AB1E39589AB2C43E41C50E76B5D1621 /* Headers */ = {
+		47E837FC8DAD52CDB1A4EE04683B0EA6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6DAC1DAB6EE378024041179788BA004 /* QHorizontalTableView-umbrella.h in Headers */,
+				2596E899C46DB09BFC0D9D1C075F0A60 /* Pods-qtabs-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B648E6F2E603E76D1F112DB29DDEF7EA /* Headers */ = {
+		88706F9CB1783958BBA9BC9AD668900B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3B62C74ADB2FAE8018161EEFDD24972 /* QSExtensionSwift-umbrella.h in Headers */,
+				4EC840576C274CB09F46B5AB3FFC485A /* QSExtensionSwift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CF30E014DF60B0611CC18BD8EB598B16 /* Headers */ = {
+		94B916C11022D32027858BE59D7438F5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54F634B56699B64F13E8AAF42DB397C0 /* Pods-qtabs-umbrella.h in Headers */,
+				A1287E592CB4E3B9A69C7261D497CF2C /* QTabView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E84CC631959F6E62E55D3D1E2B6A758 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EB6A42EE21C25D4F6E26D52DC7C0B2D /* SwiftHashing-umbrella.h in Headers */,
+				FA7A09B8B893163A79AE9D0944611CF3 /* SwiftHashing.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2BE6AFCB312B9A08085A653529ADA146 /* QHorizontalTableView */ = {
+		A2B2487602FBBB443529F53EC2D9E2F4 /* QHorizontalTableView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0310D3F17430D3DCD4D66C594800AC57 /* Build configuration list for PBXNativeTarget "QHorizontalTableView" */;
+			buildConfigurationList = 8995DBFB41C51B8E8D8E0406849EF517 /* Build configuration list for PBXNativeTarget "QHorizontalTableView" */;
 			buildPhases = (
-				DE4DC6D589BE446F77ACEB5B579B07E8 /* Sources */,
-				91B225B19120B1CC2E6C908F695F7788 /* Frameworks */,
-				7AB1E39589AB2C43E41C50E76B5D1621 /* Headers */,
+				497119BDE618F9E1CD9EC9BB7260D2C3 /* Sources */,
+				800DA21F63E8C8398CA41915120EDBF2 /* Frameworks */,
+				1599C247AFC890B127968BDEEB2D1B13 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -451,16 +545,75 @@
 			);
 			name = QHorizontalTableView;
 			productName = QHorizontalTableView;
-			productReference = DC7664F9B393F9A8AF87DA518EE9C6D6 /* QHorizontalTableView.framework */;
+			productReference = A2AC8F450EFBE6BA6B864C6E28BCC334 /* QHorizontalTableView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		4B5B6BBE92F4C04EA3A1709D0A2029FB /* SwiftHashing */ = {
+		AA411B0A5AD85AF70D49C37F05BFE40C /* QTabView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A04470D8E6E799B59C91F349621E434C /* Build configuration list for PBXNativeTarget "SwiftHashing" */;
+			buildConfigurationList = 73BB29C86153555C74758099F6536B37 /* Build configuration list for PBXNativeTarget "QTabView" */;
 			buildPhases = (
-				A3AA9829B8680F83DD28A4DC7F33616B /* Sources */,
-				76CC10F30DBD434C19271DF8AC79675C /* Frameworks */,
-				5FE04EB001A5F401C02538E91B6ED471 /* Headers */,
+				FE6ECBECB4584C2B11376B17E6435756 /* Sources */,
+				3B51A11732F85B3A8883F98B8209F067 /* Frameworks */,
+				94B916C11022D32027858BE59D7438F5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9CF7F305767186BEA93AD084FDAB2029 /* PBXTargetDependency */,
+				A762E931CB27530E8C7905255E793926 /* PBXTargetDependency */,
+				40E567213E60784334E5FCC27B213D43 /* PBXTargetDependency */,
+			);
+			name = QTabView;
+			productName = QTabView;
+			productReference = 1F2D0727BBD5493AAF4ABB6DC4B40A5B /* QTabView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D44442064AF23928B060094A770093BD /* QSExtensionSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 618163F94118BA687426B80062F23810 /* Build configuration list for PBXNativeTarget "QSExtensionSwift" */;
+			buildPhases = (
+				85CE7AB587D08EF3C610C631463E9C18 /* Sources */,
+				94AD95278BD11AB6B327B89EE923BDC8 /* Frameworks */,
+				88706F9CB1783958BBA9BC9AD668900B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				40E6757D269A3F120B5EE0A0CE40AC03 /* PBXTargetDependency */,
+			);
+			name = QSExtensionSwift;
+			productName = QSExtensionSwift;
+			productReference = 71B609FE4B5712F5933D497034DE306A /* QSExtensionSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D74900E47D80A66867D293688D6C6FF6 /* Pods-qtabs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 225C41C196AC0D6EB52F5641F59205B3 /* Build configuration list for PBXNativeTarget "Pods-qtabs" */;
+			buildPhases = (
+				DDF1F960C2C170971AA14E1AEDBA5172 /* Sources */,
+				719882B3CDBE6CA327F50BCD8B137D1C /* Frameworks */,
+				47E837FC8DAD52CDB1A4EE04683B0EA6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8D9D3A61C2D23BDC30795F3C8CEC9A3A /* PBXTargetDependency */,
+				97ACE918B97B9657D298ED3FD64BB40B /* PBXTargetDependency */,
+				2BFA3A4112D9B1995FEA7303D0D0B571 /* PBXTargetDependency */,
+				B921B6C3F4ED503E8E74688523F226CB /* PBXTargetDependency */,
+			);
+			name = "Pods-qtabs";
+			productName = "Pods-qtabs";
+			productReference = A4C666DE003BA61B18092FF648E9B16B /* Pods_qtabs.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E82F34EFD7FE3C61DF34ED36719B8D34 /* SwiftHashing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5289CC256F7934D2A2FC14B5876278C0 /* Build configuration list for PBXNativeTarget "SwiftHashing" */;
+			buildPhases = (
+				54F1FA501B718D053EEEC43D39BC6073 /* Sources */,
+				445EC4C5798B2BA75429D72B9CD1E182 /* Frameworks */,
+				9E84CC631959F6E62E55D3D1E2B6A758 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -468,45 +621,7 @@
 			);
 			name = SwiftHashing;
 			productName = SwiftHashing;
-			productReference = 76082A16A9ACCA35ACCE700E6CF3CBB6 /* SwiftHashing.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		5786D67F9C8F96D810435B3C9E074EA9 /* QSExtensionSwift */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5AE512E69375B90AC678FAF6A6653A01 /* Build configuration list for PBXNativeTarget "QSExtensionSwift" */;
-			buildPhases = (
-				4CF39787BA16BB90272917A17A6B2D25 /* Sources */,
-				0EEA5D661FDE96F64D5197C13B45A879 /* Frameworks */,
-				B648E6F2E603E76D1F112DB29DDEF7EA /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5D8E7395514EAED79AE4B79F0C6C566C /* PBXTargetDependency */,
-			);
-			name = QSExtensionSwift;
-			productName = QSExtensionSwift;
-			productReference = E281230B8FEF1C042B52E78157EEBE06 /* QSExtensionSwift.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		70B1F77DC2181ED61E939A1BF073DB64 /* Pods-qtabs */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 074BBC62C57256958DE2E9DC667C9471 /* Build configuration list for PBXNativeTarget "Pods-qtabs" */;
-			buildPhases = (
-				0C9252D9737E78D99ACAA2FCFDEF3176 /* Sources */,
-				AF342CE1FB914D2D1A1758475C364C23 /* Frameworks */,
-				CF30E014DF60B0611CC18BD8EB598B16 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DBBB779E365749C946C2337106732D18 /* PBXTargetDependency */,
-				7E93C6BDF56FF5966AFF271D9D616170 /* PBXTargetDependency */,
-				9C8516BF36D67068C74F2F1928CCFE99 /* PBXTargetDependency */,
-			);
-			name = "Pods-qtabs";
-			productName = "Pods-qtabs";
-			productReference = 37C00D24CF5694B81EB4DB1730C8C97D /* Pods_qtabs.framework */;
+			productReference = 588F658A42583B766741D7D5C2C5F15F /* SwiftHashing.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -526,164 +641,273 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 495646B2A68423F4E8256E32DCEE4332 /* Products */;
+			productRefGroup = C8E39F24BE92D92F4ABF83342BC3BF24 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				70B1F77DC2181ED61E939A1BF073DB64 /* Pods-qtabs */,
-				2BE6AFCB312B9A08085A653529ADA146 /* QHorizontalTableView */,
-				5786D67F9C8F96D810435B3C9E074EA9 /* QSExtensionSwift */,
-				4B5B6BBE92F4C04EA3A1709D0A2029FB /* SwiftHashing */,
+				D74900E47D80A66867D293688D6C6FF6 /* Pods-qtabs */,
+				A2B2487602FBBB443529F53EC2D9E2F4 /* QHorizontalTableView */,
+				D44442064AF23928B060094A770093BD /* QSExtensionSwift */,
+				AA411B0A5AD85AF70D49C37F05BFE40C /* QTabView */,
+				E82F34EFD7FE3C61DF34ED36719B8D34 /* SwiftHashing */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0C9252D9737E78D99ACAA2FCFDEF3176 /* Sources */ = {
+		497119BDE618F9E1CD9EC9BB7260D2C3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0228D969C41923D49E6621BC2A6DFE70 /* Pods-qtabs-dummy.m in Sources */,
+				A3D5F8359118C7067FDAE8DDBF9C1CAC /* QHorizontalTableView-dummy.m in Sources */,
+				F0A1FCE40900B95C180C2EF800A08E8E /* QHorizontalTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4CF39787BA16BB90272917A17A6B2D25 /* Sources */ = {
+		54F1FA501B718D053EEEC43D39BC6073 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A3B7FF2B6A7C55E9B733AEC7A1C731F /* CALayer+Frame.swift in Sources */,
-				95DD600DDC240945D3B3CFF2285BA710 /* CALayer+Sublayer.swift in Sources */,
-				2157D66562982F7E97331CAFBFCAD3FC /* Date+Components.swift in Sources */,
-				B49C6BFE3023CBCEDB89E0B680FA4A37 /* NSArray+String.swift in Sources */,
-				4155D1B3D857A9FCB0034FA7D876B26A /* NSData+String.swift in Sources */,
-				CEB78D3C3074DA7E5B7FBA1D5EBB7955 /* NSDictionary+Json.swift in Sources */,
-				E4E13BF51642EDF5706DFF3C8B942872 /* NSNumber+ Converte.swift in Sources */,
-				30B1E6A2C903E87CF4B19AF10C489E1F /* NSNumber+Random.swift in Sources */,
-				F46682C1CAAB38FCF474B1E46D4C0CC6 /* NSObject+Class.swift in Sources */,
-				D3B6B1F8AB42CBD8FEA6E00EBC1722F2 /* QSExtensionSwift-dummy.m in Sources */,
-				A0305A5F0882C3AE140235834FF78876 /* String+Json.swift in Sources */,
-				D5AE4434A290B850D971723C0377CAD5 /* String+Security.swift in Sources */,
-				07A8655A981951437DC4B67F6659C417 /* String+Size.swift in Sources */,
-				DF6021062FBB6C45290283000FC077D8 /* String+Substring.swift in Sources */,
-				4134B5A00385AB8726393B5A2468148D /* String+Verification.swift in Sources */,
-				4506D21871E19D95A910D6DDD3267DB8 /* UIColor+ST.swift in Sources */,
-				E8225EE870779A191BC7A7158A81FC4E /* UIImage+Cache.swift in Sources */,
-				4E5E0E87698FAE1E9989C05FF1030DB3 /* UIImage+Color.swift in Sources */,
-				514612D94344B7F47172F1998B7E1D4E /* UIImage+Resize.swift in Sources */,
-				C474E18AECF1985BF1CA48795FF9C2A3 /* UIImage+RoundCorner.swift in Sources */,
-				3DC7B9FB4E834064644719EED763BE39 /* UIImageView+OSS.swift in Sources */,
-				43E17673E37807E766E139A6402C974C /* UILabel+Size.swift in Sources */,
-				BDE56DF39B3F3638C6218F2A9E9BE05B /* UILabel+Style.swift in Sources */,
-				410DDEAD22E96CAA3C96F89F4D408317 /* UILabel+Text.swift in Sources */,
-				3EFC0B41BF7679BBF5267FAD5DD0574B /* UINavigationController+Navigation.swift in Sources */,
-				61671883DF55E2024AF4AF60C136DAC7 /* UISearchBar+Style.swift in Sources */,
-				C85824390F7FAD9D5DC468D663321630 /* UITabBarController+TabBar.swift in Sources */,
-				3B71B0CEDC78517E65384C6E913C7678 /* UITableViewCell+Style.swift in Sources */,
-				099BD30168CDDF5098D88C961E9EC306 /* UITextField+Text.swift in Sources */,
-				28C4DF028AAAF1BA69820D1E6C7AAE85 /* UITextView+Text.swift in Sources */,
-				87539F0E9DCD65C4677A204F99A698F6 /* UIView+Appearance.swift in Sources */,
-				D81E09E14820A8911F9DEEB984CF3648 /* UIView+Constaint.swift in Sources */,
-				08B649E66CFB2EEA3529E7688A265F0A /* UIView+Frame.swift in Sources */,
-				C6D3B94C14FBC4BECD05428D17407324 /* UIView+Subview.swift in Sources */,
-				73CAC7A9A0DF195AC55B0975DB3EDF11 /* UIView+Tap.swift in Sources */,
-				A4A4BB2F8330D338793C8EB44488E51E /* UIView+Toast.swift in Sources */,
-				3755914822DB3565C97DDA846F894BAB /* UIViewController+Navigation.swift in Sources */,
-				F7285A6F2362038D054FF1097A598D85 /* UIViewController+Toast.swift in Sources */,
+				40522415726D236F6207D9785F543AE5 /* SwiftHashing-dummy.m in Sources */,
+				058E4ED3C24AD24506175609544F81BD /* SwiftHashing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A3AA9829B8680F83DD28A4DC7F33616B /* Sources */ = {
+		85CE7AB587D08EF3C610C631463E9C18 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD56B0ADD96551258BBD1FC90F550B48 /* SwiftHashing-dummy.m in Sources */,
-				C471AF4679B023DB200FF835F432E993 /* SwiftHashing.m in Sources */,
+				7F421EE83299FFD0FE63E683EDE3C40F /* CALayer+Frame.swift in Sources */,
+				CFD648F0B1A82FA2A142639ED914E05E /* CALayer+Sublayer.swift in Sources */,
+				BA16F5B73E910679631F2F6187AEF1B1 /* Date+Components.swift in Sources */,
+				8D7C46D9CD86C8687FB0195ED7DB82CC /* NSArray+String.swift in Sources */,
+				1294E0CF475545CA4A05B03572ACBDF9 /* NSData+String.swift in Sources */,
+				AC3290750D2C7175A5E6B7A929E2F26D /* NSDictionary+Json.swift in Sources */,
+				5B2F55F9BCE9F6C8ECE9DF697B2F184F /* NSNumber+ Converte.swift in Sources */,
+				783552C7211B5143644807D3BE375E6A /* NSNumber+Random.swift in Sources */,
+				1E608C643470F2414D31B58929966319 /* NSObject+Class.swift in Sources */,
+				9D3B8E27061D908EACC3B77160984351 /* QSExtensionSwift-dummy.m in Sources */,
+				1E53F5CB4B27B357B984767D044FE2A2 /* String+Json.swift in Sources */,
+				4079566AC3B7B96CE3BFAE5FAB163722 /* String+Security.swift in Sources */,
+				838D4F5312DC2B36F6889AEE4C362C47 /* String+Size.swift in Sources */,
+				6A0EC91F3486F792A027A12E4A303869 /* String+Substring.swift in Sources */,
+				4643C788BF0F8CD424E73BBD20B1B4E7 /* String+Verification.swift in Sources */,
+				AB137BE1C702532A8D9FC1B0ABAEFC33 /* UIColor+ST.swift in Sources */,
+				565172A5DE643C315B6478D8C72C85C3 /* UIImage+Cache.swift in Sources */,
+				62CCA75B634A897BE067D67A2C133934 /* UIImage+Color.swift in Sources */,
+				79ABD6FDC710D2D0954F2F1CE0A6AC4F /* UIImage+Resize.swift in Sources */,
+				36D0C71C419E49D5C723E66F009EE857 /* UIImage+RoundCorner.swift in Sources */,
+				49271D15233730BE39EE9A7AD5B8948F /* UIImageView+OSS.swift in Sources */,
+				3C0EB9D3F6BA1067FE55B4EA0209D773 /* UILabel+Size.swift in Sources */,
+				19C3B1BBFEC407E11878BD8BE68956C3 /* UILabel+Style.swift in Sources */,
+				AE02B9C8A0345542FE3D9AF97D1A2139 /* UILabel+Text.swift in Sources */,
+				2109536FC9B29864AF580720F0B93078 /* UINavigationController+Navigation.swift in Sources */,
+				B009BABFC64CC8DAE18D0CB94896911D /* UISearchBar+Style.swift in Sources */,
+				B47062A5090207D401560C5F7AB5721E /* UITabBarController+TabBar.swift in Sources */,
+				DCD2A43931C81FC9792662A5AF46D1B0 /* UITableViewCell+Style.swift in Sources */,
+				639CEB916C90CA0F45C668A3F32F9F6C /* UITextField+Text.swift in Sources */,
+				210A46306AD51F059D29B3703254B833 /* UITextView+Text.swift in Sources */,
+				D008E0CAD2D5847AAE4F11652CA88765 /* UIView+Appearance.swift in Sources */,
+				B825D53D5D872913A9F5B6D9C5AD357E /* UIView+Constaint.swift in Sources */,
+				6899360F47456B91D5D5B5E462831D63 /* UIView+Frame.swift in Sources */,
+				3118E09B06A4EE220DADE30D8C823B5B /* UIView+Subview.swift in Sources */,
+				174C7545DCA6C89702C0913FCC3E3D64 /* UIView+Tap.swift in Sources */,
+				A722D9AEEE20899F104710FBB0139ECA /* UIView+Toast.swift in Sources */,
+				90864E9914C2E670F0F37E4BFD2FA126 /* UIViewController+Navigation.swift in Sources */,
+				70B0C710C7362EE510586EEE654F5BFF /* UIViewController+Toast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DE4DC6D589BE446F77ACEB5B579B07E8 /* Sources */ = {
+		DDF1F960C2C170971AA14E1AEDBA5172 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DA97B5E8606232133771914A946489B /* QHorizontalTableView-dummy.m in Sources */,
-				6479C8D07082063FF3A8B0D541D1287F /* QHorizontalTableView.swift in Sources */,
+				64228024652B7B8CDE4E20817AE25905 /* Pods-qtabs-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE6ECBECB4584C2B11376B17E6435756 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00CC4AC24EC3BE6C33893C54D7FEB624 /* QTabView-dummy.m in Sources */,
+				A25801AE96A9FE6FC91B47C08516CBE3 /* QTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5D8E7395514EAED79AE4B79F0C6C566C /* PBXTargetDependency */ = {
+		2BFA3A4112D9B1995FEA7303D0D0B571 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QTabView;
+			target = AA411B0A5AD85AF70D49C37F05BFE40C /* QTabView */;
+			targetProxy = EFE81704B4E2AD68ECC0225AC248377C /* PBXContainerItemProxy */;
+		};
+		40E567213E60784334E5FCC27B213D43 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftHashing;
-			target = 4B5B6BBE92F4C04EA3A1709D0A2029FB /* SwiftHashing */;
-			targetProxy = F7EAB4B5E6E47958F5E64E730C204E10 /* PBXContainerItemProxy */;
+			target = E82F34EFD7FE3C61DF34ED36719B8D34 /* SwiftHashing */;
+			targetProxy = 66650F4BD6FBBD8B0B776C4E55783CEE /* PBXContainerItemProxy */;
 		};
-		7E93C6BDF56FF5966AFF271D9D616170 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = QSExtensionSwift;
-			target = 5786D67F9C8F96D810435B3C9E074EA9 /* QSExtensionSwift */;
-			targetProxy = 8BCF068C4D46AB6BA10A206EBB369B6E /* PBXContainerItemProxy */;
-		};
-		9C8516BF36D67068C74F2F1928CCFE99 /* PBXTargetDependency */ = {
+		40E6757D269A3F120B5EE0A0CE40AC03 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftHashing;
-			target = 4B5B6BBE92F4C04EA3A1709D0A2029FB /* SwiftHashing */;
-			targetProxy = 819DD8F5F63B25670B8DBB686B2F7CEF /* PBXContainerItemProxy */;
+			target = E82F34EFD7FE3C61DF34ED36719B8D34 /* SwiftHashing */;
+			targetProxy = D4AAC11FC44227934425145D5D500BC8 /* PBXContainerItemProxy */;
 		};
-		DBBB779E365749C946C2337106732D18 /* PBXTargetDependency */ = {
+		8D9D3A61C2D23BDC30795F3C8CEC9A3A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = QHorizontalTableView;
-			target = 2BE6AFCB312B9A08085A653529ADA146 /* QHorizontalTableView */;
-			targetProxy = 23D7518D411E42281C0581DAA53F922C /* PBXContainerItemProxy */;
+			target = A2B2487602FBBB443529F53EC2D9E2F4 /* QHorizontalTableView */;
+			targetProxy = 8612C68A3C3154BE4057A1A1D354C13B /* PBXContainerItemProxy */;
+		};
+		97ACE918B97B9657D298ED3FD64BB40B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QSExtensionSwift;
+			target = D44442064AF23928B060094A770093BD /* QSExtensionSwift */;
+			targetProxy = 468B2DE99F3CB34B4D377758D196142D /* PBXContainerItemProxy */;
+		};
+		9CF7F305767186BEA93AD084FDAB2029 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QHorizontalTableView;
+			target = A2B2487602FBBB443529F53EC2D9E2F4 /* QHorizontalTableView */;
+			targetProxy = A84D2F7EC2F2201C9EF38BB82223E8F7 /* PBXContainerItemProxy */;
+		};
+		A762E931CB27530E8C7905255E793926 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QSExtensionSwift;
+			target = D44442064AF23928B060094A770093BD /* QSExtensionSwift */;
+			targetProxy = F2946B9E8D73F1ED7490F7BC50FCA7F3 /* PBXContainerItemProxy */;
+		};
+		B921B6C3F4ED503E8E74688523F226CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftHashing;
+			target = E82F34EFD7FE3C61DF34ED36719B8D34 /* SwiftHashing */;
+			targetProxy = BAF5FA4EB066327B9FCE01811C94B69E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0745223A16FFCA492E4BD4D012803623 /* Release */ = {
+		100E5262DC8E754FDD8EA3A82C73335D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A26E6706FC1D5E7CC9D2C3B31B314A4 /* SwiftHashing.xcconfig */;
+			baseConfigurationReference = C382562940D7FE4FDD149C13AF96048C /* QHorizontalTableView.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftHashing/SwiftHashing-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftHashing/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/QHorizontalTableView/QHorizontalTableView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/QHorizontalTableView/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftHashing/SwiftHashing.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftHashing;
+				MODULEMAP_FILE = "Target Support Files/QHorizontalTableView/QHorizontalTableView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = QHorizontalTableView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		1396C2A1926720044904B36A8ED917F7 /* Release */ = {
+		24F1541D5D0B3693416519A85BB333D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6720026101807C02BC7D0F9E709A9AE1 /* QSExtensionSwift.xcconfig */;
+			baseConfigurationReference = F8DE5DC2D843695FF8576114B5C0E2C9 /* QTabView.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/QTabView/QTabView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/QTabView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/QTabView/QTabView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = QTabView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4EC99B61A1C2BD0F7A62D91F015C76C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16E29B641C599F246A46A5310277365D /* Pods-qtabs.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-qtabs/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-qtabs/Pods-qtabs.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_qtabs;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		63996D07362011279FBFBD82410AEEDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF709C61F2305F3479F12E2016FBE8C5 /* QSExtensionSwift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -696,22 +920,22 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/QSExtensionSwift/QSExtensionSwift.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = QSExtensionSwift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		1F5A0F637BBD9CFD2169C134D88E912D /* Release */ = {
+		68FED49E23096B0288F889786863F534 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85093B71ED76F2D82A5C4ECA2F1FDAF1 /* QHorizontalTableView.xcconfig */;
+			baseConfigurationReference = C382562940D7FE4FDD149C13AF96048C /* QHorizontalTableView.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -743,6 +967,40 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		6CC055B45C7389E47C9B67438537EE76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CCE2EBD3413B84169CBE5953417CA20 /* SwiftHashing.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftHashing/SwiftHashing-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftHashing/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftHashing/SwiftHashing.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftHashing;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		707B86CFB21B645E37109F39754D4051 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -788,16 +1046,16 @@
 			};
 			name = Release;
 		};
-		747BA55ECD8E4817BB0EA7A4303552B5 /* Debug */ = {
+		A3719B9A7AD19EEC1BCAE892428C6444 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A26E6706FC1D5E7CC9D2C3B31B314A4 /* SwiftHashing.xcconfig */;
+			baseConfigurationReference = 0CCE2EBD3413B84169CBE5953417CA20 /* SwiftHashing.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -810,7 +1068,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SwiftHashing/SwiftHashing.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = SwiftHashing;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -820,53 +1078,53 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		76340722B7BB59930AA1F1C33A8FFE6C /* Debug */ = {
+		B2E127666D99CC5C31BA0CAD88B78F73 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6720026101807C02BC7D0F9E709A9AE1 /* QSExtensionSwift.xcconfig */;
+			baseConfigurationReference = F8DE5DC2D843695FF8576114B5C0E2C9 /* QTabView.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/QSExtensionSwift/QSExtensionSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/QSExtensionSwift/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/QTabView/QTabView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/QTabView/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/QSExtensionSwift/QSExtensionSwift.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = QSExtensionSwift;
+				MODULEMAP_FILE = "Target Support Files/QTabView/QTabView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = QTabView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		AE4DEE863578DE213D3BCFFA24C56B77 /* Debug */ = {
+		EA4CB81157F4C7ABB66F5B1BF35353DB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 16E29B641C599F246A46A5310277365D /* Pods-qtabs.debug.xcconfig */;
+			baseConfigurationReference = 5222C82B2626317DDAA4AF14813B0DFB /* Pods-qtabs.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -879,7 +1137,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-qtabs/Pods-qtabs.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -887,49 +1145,13 @@
 				PRODUCT_NAME = Pods_qtabs;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
-		};
-		B70E083860D0C1935CEEED45E3FB4D3D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85093B71ED76F2D82A5C4ECA2F1FDAF1 /* QHorizontalTableView.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/QHorizontalTableView/QHorizontalTableView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/QHorizontalTableView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/QHorizontalTableView/QHorizontalTableView.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = QHorizontalTableView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
+			name = Release;
 		};
 		EF26A3C5B6EDA309192C6025F703DE0A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -980,9 +1202,9 @@
 			};
 			name = Debug;
 		};
-		F248C6D19AD9319F43C9FA59AF45A1F7 /* Release */ = {
+		F95DD082D89D38092CB561371270EF2F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5222C82B2626317DDAA4AF14813B0DFB /* Pods-qtabs.release.xcconfig */;
+			baseConfigurationReference = CF709C61F2305F3479F12E2016FBE8C5 /* QSExtensionSwift.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -996,20 +1218,17 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-qtabs/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/QSExtensionSwift/QSExtensionSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/QSExtensionSwift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-qtabs/Pods-qtabs.modulemap";
+				MODULEMAP_FILE = "Target Support Files/QSExtensionSwift/QSExtensionSwift.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_qtabs;
+				PRODUCT_NAME = QSExtensionSwift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1021,20 +1240,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0310D3F17430D3DCD4D66C594800AC57 /* Build configuration list for PBXNativeTarget "QHorizontalTableView" */ = {
+		225C41C196AC0D6EB52F5641F59205B3 /* Build configuration list for PBXNativeTarget "Pods-qtabs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B70E083860D0C1935CEEED45E3FB4D3D /* Debug */,
-				1F5A0F637BBD9CFD2169C134D88E912D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		074BBC62C57256958DE2E9DC667C9471 /* Build configuration list for PBXNativeTarget "Pods-qtabs" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AE4DEE863578DE213D3BCFFA24C56B77 /* Debug */,
-				F248C6D19AD9319F43C9FA59AF45A1F7 /* Release */,
+				4EC99B61A1C2BD0F7A62D91F015C76C1 /* Debug */,
+				EA4CB81157F4C7ABB66F5B1BF35353DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1048,20 +1258,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5AE512E69375B90AC678FAF6A6653A01 /* Build configuration list for PBXNativeTarget "QSExtensionSwift" */ = {
+		5289CC256F7934D2A2FC14B5876278C0 /* Build configuration list for PBXNativeTarget "SwiftHashing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				76340722B7BB59930AA1F1C33A8FFE6C /* Debug */,
-				1396C2A1926720044904B36A8ED917F7 /* Release */,
+				6CC055B45C7389E47C9B67438537EE76 /* Debug */,
+				A3719B9A7AD19EEC1BCAE892428C6444 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A04470D8E6E799B59C91F349621E434C /* Build configuration list for PBXNativeTarget "SwiftHashing" */ = {
+		618163F94118BA687426B80062F23810 /* Build configuration list for PBXNativeTarget "QSExtensionSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				747BA55ECD8E4817BB0EA7A4303552B5 /* Debug */,
-				0745223A16FFCA492E4BD4D012803623 /* Release */,
+				63996D07362011279FBFBD82410AEEDC /* Debug */,
+				F95DD082D89D38092CB561371270EF2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73BB29C86153555C74758099F6536B37 /* Build configuration list for PBXNativeTarget "QTabView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24F1541D5D0B3693416519A85BB333D2 /* Debug */,
+				B2E127666D99CC5C31BA0CAD88B78F73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8995DBFB41C51B8E8D8E0406849EF517 /* Build configuration list for PBXNativeTarget "QHorizontalTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				100E5262DC8E754FDD8EA3A82C73335D /* Debug */,
+				68FED49E23096B0288F889786863F534 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

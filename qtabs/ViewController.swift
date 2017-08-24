@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QTabView
 
 class ViewController: UIViewController {
 

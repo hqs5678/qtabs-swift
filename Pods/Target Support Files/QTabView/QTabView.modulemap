@@ -1,0 +1,6 @@
+framework module QTabView {
+  umbrella header "QTabView-umbrella.h"
+
+  export *
+  module * { export * }
+}

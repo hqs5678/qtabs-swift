@@ -36,6 +36,17 @@
 		</dict>
 		<dict>
 			<key>FooterText</key>
+			<string>MIT
+</string>
+			<key>License</key>
+			<string>MIT</string>
+			<key>Title</key>
+			<string>QTabView</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
 			<string>The MIT License (MIT)
 
 Copyright (c) 2015 Shaun Harrison

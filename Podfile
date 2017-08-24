@@ -7,5 +7,7 @@ target 'qtabs' do
 
   pod 'QHorizontalTableView'
   pod 'QSExtensionSwift'
+  
+  pod 'QTabView'
 
 end

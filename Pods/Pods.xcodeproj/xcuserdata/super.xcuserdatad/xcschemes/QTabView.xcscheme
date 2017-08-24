@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'D44442064AF23928B060094A770093BD'
-               BlueprintName = 'QSExtensionSwift'
+               BlueprintIdentifier = 'AA411B0A5AD85AF70D49C37F05BFE40C'
+               BlueprintName = 'QTabView'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'QSExtensionSwift.framework'>
+               BuildableName = 'QTabView.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
