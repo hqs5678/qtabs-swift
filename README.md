@@ -1,6 +1,7 @@
 # QTabView
 
 标签页，可以用于新闻的界面、有不同分类的界面等。已适配横屏。
+Android 版：https://github.com/hqs5678/hqs-common-tabs-android
 
 ##### 运行效果图
 ![运行效果图](https://github.com/hqs5678/qtabs-swift/blob/master/2017-08-24%2017_35_32.gif)
